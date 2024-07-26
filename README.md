@@ -1,15 +1,15 @@
-# ReactTablePro
+# ReactDateTablePro
 
 ## Overview
 
-`ReactTablePro` is a flexible and customizable React table component designed for displaying and managing tabular data with ease. This component supports various functionalities such as searching, pagination, and more.
+`ReactDateTablePro` is a flexible and customizable React table component designed for displaying and managing tabular data with ease. This component supports various functionalities such as searching, pagination, and more.
 
 ## Installation
 
-To install the `ReactTablePro` component, you can use npm:
+To install the `ReactDateTablePro` component, you can use npm:
 
 ```bash
-npm install react-table-pro
+npm install react-data-table-pro
 
 ```
 
@@ -24,7 +24,7 @@ yarn add react-filter-chips
 
 ```tsx
 import React, { useState, useEffect } from "react";
-import ReactTablePro from "react-table-pro";
+import ReactDateTablePro from "react-data-table-pro";
 
 const members = [
   {
@@ -152,7 +152,7 @@ function App() {
 
   return (
     <div className="App">
-      <ReactTablePro
+      <ReactDateTablePro
         data={users} // required
         TABLE_HEAD={TABLE_HEAD} // required
         MENU_OPTIONS={MENU_OPTIONS} // required

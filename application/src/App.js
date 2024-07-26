@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ReactTablePro from "react-table-pro";
+import ReactDateTablePro from "react-data-table-pro";
 
 const members = [
   {
@@ -127,7 +127,7 @@ function App() {
 
   return (
     <div className="App">
-      <ReactTablePro
+      <ReactDateTablePro
         data={users} // required
         TABLE_HEAD={TABLE_HEAD} // required
         MENU_OPTIONS={MENU_OPTIONS} // required
