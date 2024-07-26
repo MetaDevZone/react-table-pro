@@ -255,7 +255,6 @@ const ReactTablePro = ({
                           return <td key={i}></td>;
                         }
                       } else if (head.type === "number") {
-                        console.log(head.show_history, "head.show_history");
                         return (
                           <td className={head.className} key={i}>
                             <span

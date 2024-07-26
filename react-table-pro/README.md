@@ -1,3 +1,28 @@
+# ReactTablePro
+
+## Overview
+
+`ReactTablePro` is a flexible and customizable React table component designed for displaying and managing tabular data with ease. This component supports various functionalities such as searching, pagination, and more.
+
+## Installation
+
+To install the `ReactTablePro` component, you can use npm:
+
+```bash
+npm install react-table-pro
+
+```
+
+Or using yarn
+
+```bash
+yarn add react-filter-chips
+
+```
+
+## Simple Usage
+
+```tsx
 import React, { useState, useEffect } from "react";
 import ReactTablePro from "react-table-pro";
 
@@ -157,3 +182,35 @@ function App() {
 }
 
 export default App;
+```
+
+## Props
+
+| Prop                     | Type      | Description                                                             | Default |
+| ------------------------ | --------- | ----------------------------------------------------------------------- | ------- |
+| `data`                   | `Array`   | An array of objects representing the data to be displayed in the table. |         |
+| `TABLE_HEAD`             | `Array`   | An array of objects defining the structure of the table header.         |         |
+| `MENU_OPTIONS`           | `Array`   | An array of objects for action menu options (e.g., edit, delete).       |         |
+| `checkbox_selection`     | `Object`  | Configuration object for managing checkbox selection in the table.      |         |
+| `className`              | `String`  | Custom class name for additional styling.                               |         |
+| `theme_config`           | `Object`  | Configuration object for customizing the table's theme. .               |         |
+| `isStickyHeader`         | `Boolean` | Determines if the table header should be sticky.                        | `false` |
+| `isHideFooterPagination` | `Boolean` | Hides the footer pagination if set to true.                             | `false` |
+| `isHideHeaderPagination` | `Boolean` | Hides the header pagination if set to true.                             | `false` |
+| `isHideSearch`           | `Boolean` | Hides the search bar if set to true.                                    | `false` |
+
+## Custom Cell Types
+
+| Type           | Description                    |
+| -------------- | ------------------------------ |
+| `action`       | Renders custom action buttons. |
+| `thumbnail`    | Displays an image thumbnail.   |
+| `row_status`   | Shows the status of the row.   |
+|                |
+| `row_calendar` | Shows the status of the row.   |
+| `link`         | Renders a clickable link.      |
+| `radio_button` | RRenders a radio button.       |
+| `html`         | Renders HTML content.          |
+| `checkbox`     | Renders a checkbox.            |
+
+Meta Dev Zone – [@meta-dev-zone](https://www.npmjs.com/~meta-dev-zone)

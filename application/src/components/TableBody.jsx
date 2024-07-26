@@ -39,7 +39,6 @@ const TableBody = ({
   const handleExpandClick = (rowId, index) => {
     let isExist = expandedRows.find((id) => id === rowId);
     let element = document.getElementsByClassName("history-container")[index];
-    console.log(element, "elementelement");
     if (element) {
       let height = element.offsetHeight;
       let selectedElement = element.parentElement;
