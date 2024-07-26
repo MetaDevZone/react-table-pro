@@ -1,0 +1,205 @@
+import React, { useEffect, useState } from "react";
+import EditIcon from "./components/svg/EditIcon";
+import DeleteIcon from "./components/svg/DeleteIcon";
+import ReactTablePro from "react-table-pro";
+// import ReactTablePro from "./ReactTablePro";
+
+const members = [
+  {
+    _id: 1,
+    name: "John Doe",
+    email: "johndoe@example.com",
+    phoneNumber: "+44 1233 123456",
+    status: true,
+    profileImage:
+      "https://images.unsplash.com/photo-1599566150163-29194dcaad36",
+    date_of_birth: "01-01-1990",
+  },
+  {
+    _id: 2,
+    name: "Jane Smith",
+    email: "janesmith@example.com",
+    phoneNumber: "+44 1233 123456",
+    status: false,
+    profileImage:
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb",
+    date_of_birth: "15-05-1985",
+  },
+  {
+    _id: 3,
+    name: "Alice Johnson",
+    email: "alicejohnson@example.com",
+    phoneNumber: "+44 1233 123456",
+    status: true,
+    profileImage:
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9",
+    date_of_birth: "20-08-1992",
+  },
+];
+
+const TABLE_HEAD = [
+  { id: "action", label: "Action", type: "action" },
+  {
+    id: "number",
+    label: "#",
+    type: "number",
+    show_history: (row) => {
+      return {
+        is_show_history: true,
+        icon: "",
+        component: (
+          <>
+            <div className="history-container">
+              <h2>History</h2>
+              <div className="history-list">
+                <div className="history-item">
+                  <div className="history-content">
+                    <div className="date">July 25, 2024</div>
+                    <div className="event">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Itaque omnis soluta, aperiam incidunt,
+                    </div>
+                  </div>
+                </div>
+                <div className="history-item">
+                  <div className="history-content">
+                    <div className="date">July 24, 2024</div>
+                    <div className="event">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Itaque omnis soluta, aperiam incidunt, eveniet illum ipsum
+                      odio fugit reprehenderit,
+                    </div>
+                  </div>
+                </div>
+                <div className="history-item">
+                  <div className="history-content">
+                    <div className="date">July 23, 2024</div>
+                    <div className="event">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Itaque omnis soluta, aperiam incidunt, eveniet illum ipsum
+                      odio fugit reprehenderit, sint iusto temporibus iure natus
+                      ratione? In nobis adipisci qui molestias?
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </>
+        ),
+      };
+    },
+  },
+  { id: "thumbnail", label: "Profile Image", type: "thumbnail" },
+  { id: "name", label: "User Name" },
+  { id: "email", label: "Email" },
+  { id: "phoneNumber", label: "Phone Number" },
+  { id: "date_of_birth", label: "Date Of Birth" },
+  { id: "status", label: "Status", type: "row_status" },
+  { id: "row_calendar", label: "Date", type: "row_calendar" },
+  { id: "link", label: "Link", type: "link" },
+  { id: "radio_button", label: "Radio Button", type: "radio_button" },
+  {
+    id: "any",
+    label: "Render Data",
+    renderData: (row) => {
+      return <div>Render Data {row._id}</div>;
+    },
+  },
+  { id: "html", label: "HTML", type: "html" },
+  { id: "checkbox", label: "Checkbox", type: "checkbox" },
+];
+
+function App() {
+  const [selected, setSelected] = useState([]);
+  const [searchText, setSearchText] = useState("");
+  const [users, setUsers] = useState([]);
+
+  const handleEdit = (value) => {
+    console.log(value, "---value");
+  };
+
+  const handleDelete = (value) => {
+    console.log(value, "---value");
+  };
+
+  const MENU_OPTIONS = [
+    {
+      label: "Edit",
+      icon: <EditIcon />,
+      handleClick: handleEdit,
+    },
+    {
+      label: "Delete",
+      icon: <DeleteIcon />,
+      handleClick: handleDelete,
+      // child_options: [
+      //   {
+      //     label: "Setting",
+      //     icon: <EditIcon />,
+      //     handleClick: handleEdit,
+      //   },
+      //   {
+      //     label: "Update",
+      //     icon: <EditIcon />,
+      //     handleClick: handleEdit,
+      //   },
+      // ],
+    },
+  ];
+
+  const getData = () => {
+    const data = members.map((item) => {
+      return {
+        ...item,
+        is_show_celendar: true,
+        link: {
+          to: "https://www.google.com/",
+          target: "_blank",
+          show_text: "Preview",
+        },
+        thumbnail: {
+          src: item.profileImage,
+          alt: "Profile Image",
+        },
+        html: "<div>html text </div>",
+      };
+    });
+    setUsers(data);
+  };
+
+  const searchFunction = () => {};
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  return (
+    <ReactTablePro
+      data={users}
+      TABLE_HEAD={TABLE_HEAD}
+      MENU_OPTIONS={MENU_OPTIONS}
+      checkbox_selection={{
+        selected: selected,
+        setSelected: setSelected,
+        // selected_by: "",
+      }}
+      // custom_search={{
+      //   searchText: searchText,
+      //   setSearchText: setSearchText,
+      //   handleSubmit: searchFunction,
+      // }}
+      className=""
+      themeConfig={{
+        background: "",
+        color: "",
+        iconColor: "",
+      }}
+      isStickyHeader={false}
+      isHideFooterPagination={false}
+      isHideHeaderPagination={false}
+      isHideSearch={false}
+    />
+  );
+}
+
+export default App;
