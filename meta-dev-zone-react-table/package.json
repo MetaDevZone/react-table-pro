@@ -1,6 +1,6 @@
 {
   "name": "@meta-dev-zone/react-table",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "main": "./build/index.js",
   "private": false,
   "scripts": {
@@ -9,6 +9,24 @@
   "author": "Meta Dev Zone",
   "license": "ISC",
   "description": "A highly customizable and feature-rich React table component for displaying and managing tabular data with ease.",
+  "keywords": [
+    "table",
+    "data-table",
+    "react-table",
+    "tabular-data",
+    "custom-table",
+    "table-component",
+    "data-management",
+    "react-component",
+    "sortable-table",
+    "filterable-table",
+    "paginated-table",
+    "editable-table",
+    "dynamic-table",
+    "table-library",
+    "table-plugin",
+    "javascript-table"
+  ],
   "devDependencies": {
     "@babel/core": "^7.7.5",
     "@babel/plugin-proposal-optional-chaining": "^7.21.0",

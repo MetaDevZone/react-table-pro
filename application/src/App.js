@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-// import ReactTable from "@meta-dev-zone/react-table";
-import ReactTable from "./ReactDateTablePro";
+import ReactTable from "@meta-dev-zone/react-table";
+// import ReactTable from "./ReactTable";
 
 const members = [
   {
@@ -11,16 +11,23 @@ const members = [
     status: true,
     profileImage:
       "https://images.unsplash.com/photo-1599566150163-29194dcaad36",
+    address: "123 Main St London WC2N 5DU UK",
+    jobTitle: "Software Engineer",
+    company: "Meta Logix Tech",
+    bio: "John is a skilled software engineer with over 10 years of experience in full-stack development. He enjoys working with the latest technologies and building innovative applications.",
   },
   {
     _id: 2,
     name: "Jane Smith",
     email: "janesmith@example.com",
-    phoneNumber: "+44 1233 123456",
+    phoneNumber: "+1 555 123 4567",
     status: false,
     profileImage:
       "https://images.unsplash.com/photo-1534528741775-53994a69daeb",
-    date_of_birth: "15-05-1985",
+    address: "456 Oak Ave New York 10001 USA",
+    jobTitle: "Product Manager",
+    company: "Dynamite Lifestyle",
+    bio: "Jane is a seasoned product manager with a passion for bringing ideas to life. She excels at leading cross-functional teams and delivering high-quality products.",
   },
   // ... more data
 ];
@@ -89,35 +96,53 @@ function App() {
           is_show_history: true,
           icon: "",
           component: (
-            <>
-              <h2>History</h2>
-              <div className="history-item">
-                <div className="history-content">
-                  <div className="date">July 24, 2024</div>
-                  <div className="event">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Itaque omnis soluta, aperiam incidunt, eveniet illum ipsum
-                    odio fugit reprehenderit,
-                  </div>
-                </div>
+            <div className="user">
+              <h3>User Info</h3>
+              <div className="user-info">
+                <h4>Name :</h4>
+                <p>{row.name}</p>
               </div>
-            </>
+              <div className="user-info">
+                <h4>Email :</h4>
+                <p>{row.email}</p>
+              </div>
+              <div className="user-info">
+                <h4>Phone Number :</h4>
+                <p>{row.phoneNumber}</p>
+              </div>
+              <div className="user-info">
+                <h4>Address :</h4>
+                <p>{row.address}</p>
+              </div>
+              <div className="user-info">
+                <h4>Job Title :</h4>
+                <p>{row.jobTitle}</p>
+              </div>
+              <div className="user-info">
+                <h4>Company :</h4>
+                <p>{row.company}</p>
+              </div>
+            </div>
           ),
         };
       },
     },
-    { id: "thumbnail", label: "Profile Image", type: "thumbnail" },
+    {
+      id: "thumbnail",
+      label: "Profile Image",
+      type: "thumbnail",
+    },
     { id: "name", label: "User Name" },
     { id: "email", label: "Email" },
     { id: "phoneNumber", label: "Phone Number" },
-    { id: "status", label: "Status", type: "row_status" },
     {
       id: "any",
-      label: "Render Data",
+      label: "Job Title",
       renderData: (row) => {
-        return <div>Render Data {row._id}</div>;
+        return <div>{row.jobTitle}</div>;
       },
     },
+    { id: "status", label: "Status", type: "row_status" },
   ];
 
   // const searchFunction = () => {};
@@ -142,16 +167,16 @@ function App() {
         //   setSearchText: setSearchText,
         //   handleSubmit: searchFunction,
         // }}
-        className=""
+        class_Name=""
         theme_config={{
           background: "#1d1c1d",
           color: "#fff",
           iconColor: "#f6bd4b",
         }}
-        isStickyHeader={false}
-        isHideFooterPagination={false}
-        isHideHeaderPagination={false}
-        isHideSearch={false}
+        is_Sticky_Header={false}
+        is_Hide_Footer_Pagination={false}
+        is_Hide_Header_Pagination={false}
+        is_Hide_Search={false}
       />
     </div>
   );

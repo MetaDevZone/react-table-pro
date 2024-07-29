@@ -398,7 +398,7 @@ module.exports = function (list, options) {
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(4);
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ":root {\r\n  --table-background-color: #fff;\r\n  --table-text-color: #000;\r\n  --table-hover-color: #0000000a;\r\n  --table-svg-color: #000;\r\n}\r\n\r\nbody,\r\nhtml {\r\n  margin: 0;\r\n  padding: 0;\r\n  font-family: system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto,\r\n    Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif;\r\n  box-sizing: border-box;\r\n}\r\n\r\n.table-container-pro {\r\n  overflow-x: auto;\r\n  color: var(--table-text-color);\r\n  border: 1px solid var(--table-text-color);\r\n  border-radius: 20px;\r\n  background-color: var(--table-background-color);\r\n}\r\n\r\n.sticky-header {\r\n  height: 650px;\r\n  position: relative;\r\n}\r\n\r\n.sticky-header .responsive-table-pro thead {\r\n  position: sticky;\r\n  top: 0;\r\n  z-index: 1;\r\n  background-color: white;\r\n}\r\n\r\n.table-container-pro .responsive-table-pro {\r\n  width: 100%;\r\n  border-collapse: collapse;\r\n  font-size: 16px;\r\n  text-align: left;\r\n  background-color: var(--table-background-color);\r\n  color: var(--table-text-color);\r\n}\r\n\r\n.table-container-pro thead,\r\n.table-container-pro tr {\r\n  border-bottom: 1px solid;\r\n}\r\n\r\n.table-container-pro .cursor-pointer {\r\n  cursor: pointer;\r\n}\r\n\r\n.table-container-pro .input-checkbox {\r\n  height: 16px;\r\n  width: 16px;\r\n}\r\n\r\n.table-container-pro .custom-chip-success {\r\n  background-color: #00c853;\r\n  color: #fff;\r\n  text-align: center;\r\n  padding: 4px 11px 7px 11px;\r\n  border-radius: 20px;\r\n  font-size: 14px;\r\n}\r\n\r\n.table-container-pro .custom-chip-error {\r\n  background-color: #f44336;\r\n  color: #fff;\r\n  text-align: center;\r\n  padding: 4px 11px 7px 11px;\r\n  border-radius: 20px;\r\n  font-size: 14px;\r\n}\r\n\r\n.table-container-pro .date-picker {\r\n  height: 30px;\r\n  font-size: 14px;\r\n  border: 1px solid;\r\n  outline: none;\r\n  border-radius: 5px;\r\n  padding: 2px 8px;\r\n}\r\n\r\n.table-container-pro table tr:hover {\r\n  background-color: var(--table-hover-color);\r\n}\r\n\r\n.table-container-pro .history-tr:hover {\r\n  background-color: var(--table-background-color);\r\n}\r\n\r\n.table-container-pro .history-tr td {\r\n  white-space: break-spaces;\r\n}\r\n\r\n.no_hover {\r\n  max-height: 0;\r\n  overflow: hidden;\r\n  transition: max-height 500ms cubic-bezier(0.4, 0, 0.2, 1);\r\n}\r\n\r\n.table-container-pro .data-not-found {\r\n  margin: 20px 0px;\r\n  text-align: center;\r\n}\r\n\r\n.table-container-pro .table-search input {\r\n  padding: 10px;\r\n  border: 1px solid;\r\n  border-radius: 5px;\r\n}\r\n\r\n.table-container-pro input {\r\n  background-color: var(--table-background-color);\r\n  color: var(--table-text-color);\r\n  border: 1px solid var(--table-text-color);\r\n}\r\n\r\n.table-container-pro th,\r\n.table-container-pro td {\r\n  text-align: left;\r\n  white-space: nowrap;\r\n  padding: 16px;\r\n}\r\n.table-container-pro thead th,\r\n.table-container-pro thead td {\r\n  background-color: var(--table-background-color);\r\n  color: var(--table-text-color);\r\n}\r\n\r\n.table-container-pro .image-avatar {\r\n  width: 40px;\r\n  height: 40px;\r\n  border-radius: 50px;\r\n  object-fit: cover;\r\n}\r\n\r\n.table-container-pro .image_avatar {\r\n  width: 40px;\r\n  height: 40px;\r\n  border-radius: 50px;\r\n  object-fit: cover;\r\n  background-color: #80808063;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  color: white;\r\n  text-transform: uppercase;\r\n  font-size: 20px;\r\n}\r\n\r\n.table-container-pro .thead-container-pro {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  padding: 15px;\r\n}\r\n\r\n.table-container-pro .show-history td {\r\n  white-space: break-spaces;\r\n  padding: 5px;\r\n}\r\n\r\n.table-container-pro .menu-popover-pro {\r\n  background: var(--table-background-color);\r\n  box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;\r\n  border-radius: 4px;\r\n  position: absolute;\r\n  max-height: 300px;\r\n  overflow-x: auto;\r\n}\r\n\r\n.table-container-pro .list-items-button {\r\n  padding: 8px 16px;\r\n  border-bottom: 1px solid;\r\n  cursor: pointer;\r\n  white-space: break-spaces;\r\n}\r\n\r\n.table-container-pro .menus-child-items {\r\n  padding: 8px 26px;\r\n  border-bottom: 1px solid;\r\n  cursor: pointer;\r\n  white-space: break-spaces;\r\n}\r\n\r\n.table-container-pro .menu-icon svg {\r\n  cursor: pointer;\r\n}\r\n\r\n.table-container-pro svg {\r\n  fill: var(--table-svg-color);\r\n}\r\n\r\n.table-container-pro .list-items-button:hover {\r\n  background-color: var(--table-hover-color);\r\n}\r\n\r\n.table-container-pro .list-items-button:last-child {\r\n  border-bottom: none;\r\n}\r\n\r\n/* .table-container-pro .menu-arrow-top-box {\r\n  position: relative;\r\n}\r\n\r\n.table-container-pro .menu-arrow-top-box::before {\r\n  content: \"\";\r\n  display: block;\r\n  position: absolute;\r\n  top: 0px;\r\n  left: 14px;\r\n  width: 10px;\r\n  height: 10px;\r\n  background-color: var(--table-background-color);\r\n  transform: translateY(-50%) rotate(45deg);\r\n  z-index: 0;\r\n} */\r\n\r\n.table-container-pro .pagination-container select {\r\n  border: none;\r\n  outline: none;\r\n  font-size: 16px;\r\n  margin-top: 5px;\r\n  margin-left: 5px;\r\n}\r\n\r\n.table-container-pro .pagination-container button {\r\n  background: transparent;\r\n  border: none;\r\n  outline: none;\r\n  color: black;\r\n  cursor: pointer;\r\n  font-size: 16px;\r\n}\r\n\r\n.table-container-pro .number-div {\r\n  display: flex;\r\n  align-items: center;\r\n}\r\n\r\n.table-container-pro .number-div .history-div {\r\n  margin-right: 15px;\r\n  cursor: pointer;\r\n}\r\n\r\n.table-container-pro .pagination-container button:disabled svg,\r\n.table-container-pro .pagination-container button:disabled {\r\n  background: transparent;\r\n  border: none;\r\n  outline: none;\r\n  cursor: not-allowed;\r\n  fill: var(--table-svg-color);\r\n  opacity: 0.8;\r\n}\r\n\r\n.table-container-pro .pagination-container .pagination-page-button {\r\n  margin-top: 15px;\r\n  display: flex;\r\n  align-items: center;\r\n}\r\n\r\n.table-container-pro .pagination-container .count-button {\r\n  padding: 2px 10px;\r\n  background: var(--table-hover-color);\r\n  margin: 0 5px;\r\n  border-radius: 5px;\r\n  height: 28px;\r\n  width: 28px;\r\n  font-size: 14px;\r\n  line-height: 0;\r\n}\r\n\r\n.table-container-pro .pagination-container .pagination-page-select {\r\n  display: flex;\r\n  align-items: center;\r\n}\r\n\r\n.table-container-pro\r\n  .pagination-container\r\n  .pagination-page-select\r\n  .pagination-count {\r\n  margin-left: 20px;\r\n}\r\n\r\n.table-container-pro .pagination-container .button-top {\r\n  margin-left: 25px;\r\n}\r\n\r\n.table-container-pro .pagination-container .count-button:hover,\r\n.table-container-pro .pagination-container .count-button.active {\r\n  background-color: #000;\r\n  color: #fff;\r\n}\r\n\r\n.table-container-pro .pagination-container .pagination-footer {\r\n  padding: 15px;\r\n  display: flex;\r\n  justify-content: end;\r\n}\r\n\r\n.table-container-pro .menu-search-box {\r\n  position: sticky;\r\n  top: 0;\r\n  z-index: 1;\r\n}\r\n\r\n.table-container-pro .menu-search-box .menu-search-input {\r\n  padding: 5px;\r\n  width: 100%;\r\n}\r\n\r\n.table-container-pro .custom-input {\r\n  margin-right: 10px;\r\n}\r\n\r\n.table-container-pro .custom-button {\r\n  padding: 5px 10px;\r\n  cursor: pointer;\r\n  background-color: var(--table-background-color);\r\n  border: 1px solid var(--table-text-color);\r\n  color: var(--table-text-color);\r\n  border-radius: 3px;\r\n}\r\n\r\n.table-container-pro select {\r\n  background-color: var(--table-background-color);\r\n  color: var(--table-text-color);\r\n}\r\n\r\n.table-container-pro .menu-dropdown-icon svg {\r\n  float: right !important;\r\n  margin-left: 15px;\r\n}\r\n\r\n.table-container-pro .history-container {\r\n  padding: 15px;\r\n}\r\n\r\n.table-container-pro .history-container h2 {\r\n  text-align: center;\r\n  margin: 0;\r\n  margin-bottom: 15px;\r\n}\r\n\r\n.table-container-pro .history-item {\r\n  display: flex;\r\n  align-items: flex-start;\r\n  margin-bottom: 20px;\r\n  position: relative;\r\n}\r\n\r\n.table-container-pro .history-content {\r\n  padding: 15px;\r\n  border-radius: 8px;\r\n  background-color: var(--table-background-color);\r\n  border: 1px solid var(--table-text-color);\r\n  width: 100%;\r\n}\r\n\r\n.table-container-pro .date {\r\n  font-size: 14px;\r\n  color: var(--table-text-color);\r\n  opacity: 0.8;\r\n  margin-bottom: 5px;\r\n}\r\n\r\n.table-container-pro .event {\r\n  font-size: 16px;\r\n  color: var(--table-text-color);\r\n  margin: 0;\r\n}\r\n", ""]);
+exports.push([module.i, ":root {\r\n  --table-background-color: #fff;\r\n  --table-text-color: #000;\r\n  --table-hover-color: #0000000a;\r\n  --table-svg-color: #000;\r\n}\r\n\r\nbody,\r\nhtml {\r\n  margin: 0;\r\n  padding: 0;\r\n  font-family: system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto,\r\n    Oxygen, Ubuntu, Cantarell, \"Open Sans\", \"Helvetica Neue\", sans-serif;\r\n  box-sizing: border-box;\r\n}\r\n\r\n.table-container-pro {\r\n  overflow-x: auto;\r\n  color: var(--table-text-color);\r\n  border: 1px solid var(--table-text-color);\r\n  border-radius: 20px;\r\n  background-color: var(--table-background-color);\r\n}\r\n\r\n.sticky-header {\r\n  height: 650px;\r\n  position: relative;\r\n}\r\n\r\n.sticky-header .responsive-table-pro thead {\r\n  position: sticky;\r\n  top: 0;\r\n  z-index: 1;\r\n  background-color: white;\r\n}\r\n\r\n.table-container-pro .responsive-table-pro {\r\n  width: 100%;\r\n  border-collapse: collapse;\r\n  font-size: 16px;\r\n  text-align: left;\r\n  background-color: var(--table-background-color);\r\n  color: var(--table-text-color);\r\n}\r\n\r\n.table-container-pro thead,\r\n.table-container-pro tr {\r\n  border-bottom: 1px solid;\r\n}\r\n\r\n.table-container-pro .cursor-pointer {\r\n  cursor: pointer;\r\n}\r\n\r\n.table-container-pro .input-checkbox {\r\n  height: 16px;\r\n  width: 16px;\r\n}\r\n\r\n.table-container-pro .custom-chip-success {\r\n  background-color: #00c853;\r\n  color: #fff;\r\n  text-align: center;\r\n  padding: 4px 11px 7px 11px;\r\n  border-radius: 20px;\r\n  font-size: 14px;\r\n}\r\n\r\n.table-container-pro .custom-chip-error {\r\n  background-color: #f44336;\r\n  color: #fff;\r\n  text-align: center;\r\n  padding: 4px 11px 7px 11px;\r\n  border-radius: 20px;\r\n  font-size: 14px;\r\n}\r\n\r\n.table-container-pro .date-picker {\r\n  height: 30px;\r\n  font-size: 14px;\r\n  border: 1px solid;\r\n  outline: none;\r\n  border-radius: 5px;\r\n  padding: 2px 8px;\r\n}\r\n\r\n.table-container-pro table tr:hover {\r\n  background-color: var(--table-hover-color);\r\n}\r\n\r\n.table-container-pro .history-tr:hover {\r\n  background-color: var(--table-background-color);\r\n}\r\n\r\n.table-container-pro .history-tr td {\r\n  white-space: break-spaces;\r\n}\r\n\r\n.no_hover {\r\n  max-height: 0;\r\n  overflow: hidden;\r\n  transition: max-height 500ms cubic-bezier(0.4, 0, 0.2, 1);\r\n}\r\n\r\n.table-container-pro .data-not-found {\r\n  margin: 20px 0px;\r\n  text-align: center;\r\n}\r\n\r\n.table-container-pro .table-search input {\r\n  padding: 10px;\r\n  border: 1px solid;\r\n  border-radius: 5px;\r\n}\r\n\r\n.table-container-pro input {\r\n  background-color: var(--table-background-color);\r\n  color: var(--table-text-color);\r\n  border: 1px solid var(--table-text-color);\r\n}\r\n\r\n.table-container-pro th,\r\n.table-container-pro td {\r\n  text-align: left;\r\n  white-space: nowrap;\r\n  padding: 16px;\r\n}\r\n.table-container-pro thead th,\r\n.table-container-pro thead td {\r\n  background-color: var(--table-background-color);\r\n  color: var(--table-text-color);\r\n}\r\n\r\n.table-container-pro .image-avatar {\r\n  width: 40px;\r\n  height: 40px;\r\n  border-radius: 50px;\r\n  object-fit: cover;\r\n}\r\n\r\n.table-container-pro .image_avatar {\r\n  width: 40px;\r\n  height: 40px;\r\n  border-radius: 50px;\r\n  object-fit: cover;\r\n  background-color: #80808063;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  color: white;\r\n  text-transform: uppercase;\r\n  font-size: 20px;\r\n}\r\n\r\n.table-container-pro .thead-container-pro {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: center;\r\n  padding: 15px;\r\n}\r\n\r\n.table-container-pro .show-history td {\r\n  white-space: break-spaces;\r\n  padding: 5px;\r\n}\r\n\r\n.table-container-pro .menu-popover-pro {\r\n  background: var(--table-background-color);\r\n  box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 8px;\r\n  border-radius: 4px;\r\n  position: absolute;\r\n  max-height: 300px;\r\n  overflow-x: auto;\r\n}\r\n\r\n.table-container-pro .list-items-button {\r\n  padding: 8px 16px;\r\n  border-bottom: 1px solid;\r\n  cursor: pointer;\r\n  white-space: break-spaces;\r\n}\r\n\r\n.table-container-pro .menus-child-items {\r\n  padding: 8px 26px;\r\n  border-bottom: 1px solid;\r\n  cursor: pointer;\r\n  white-space: break-spaces;\r\n}\r\n\r\n.table-container-pro .menu-icon svg {\r\n  cursor: pointer;\r\n}\r\n\r\n.table-container-pro svg {\r\n  fill: var(--table-svg-color);\r\n}\r\n\r\n.table-container-pro .list-items-button:hover {\r\n  background-color: var(--table-hover-color);\r\n}\r\n\r\n.table-container-pro .list-items-button:last-child {\r\n  border-bottom: none;\r\n}\r\n\r\n/* .table-container-pro .menu-arrow-top-box {\r\n  position: relative;\r\n}\r\n\r\n.table-container-pro .menu-arrow-top-box::before {\r\n  content: \"\";\r\n  display: block;\r\n  position: absolute;\r\n  top: 0px;\r\n  left: 14px;\r\n  width: 10px;\r\n  height: 10px;\r\n  background-color: var(--table-background-color);\r\n  transform: translateY(-50%) rotate(45deg);\r\n  z-index: 0;\r\n} */\r\n\r\n.table-container-pro .pagination-container select {\r\n  border: none;\r\n  outline: none;\r\n  font-size: 16px;\r\n  margin-top: 5px;\r\n  margin-left: 5px;\r\n}\r\n\r\n.table-container-pro .pagination-container button {\r\n  background: transparent;\r\n  border: none;\r\n  outline: none;\r\n  color: black;\r\n  cursor: pointer;\r\n  font-size: 16px;\r\n}\r\n\r\n.table-container-pro .number-div {\r\n  display: flex;\r\n  align-items: center;\r\n}\r\n\r\n.table-container-pro .number-div .history-div {\r\n  margin-right: 15px;\r\n  cursor: pointer;\r\n}\r\n\r\n.table-container-pro .pagination-container button:disabled svg,\r\n.table-container-pro .pagination-container button:disabled {\r\n  background: transparent;\r\n  border: none;\r\n  outline: none;\r\n  cursor: not-allowed;\r\n  fill: var(--table-svg-color);\r\n  opacity: 0.8;\r\n}\r\n\r\n.table-container-pro .pagination-container .pagination-page-button {\r\n  margin-top: 15px;\r\n  display: flex;\r\n  align-items: center;\r\n}\r\n\r\n.table-container-pro .pagination-container .count-button {\r\n  padding: 2px 10px;\r\n  background: var(--table-hover-color);\r\n  margin: 0 5px;\r\n  border-radius: 5px;\r\n  height: 28px;\r\n  width: 28px;\r\n  font-size: 14px;\r\n  line-height: 0;\r\n}\r\n\r\n.table-container-pro .pagination-container .pagination-page-select {\r\n  display: flex;\r\n  align-items: center;\r\n}\r\n\r\n.table-container-pro\r\n  .pagination-container\r\n  .pagination-page-select\r\n  .pagination-count {\r\n  margin-left: 20px;\r\n}\r\n\r\n.table-container-pro .pagination-container .button-top {\r\n  margin-left: 25px;\r\n}\r\n\r\n.table-container-pro .pagination-container .count-button:hover,\r\n.table-container-pro .pagination-container .count-button.active {\r\n  background-color: #000;\r\n  color: #fff;\r\n}\r\n\r\n.table-container-pro .pagination-container .pagination-footer {\r\n  padding: 15px;\r\n  display: flex;\r\n  justify-content: end;\r\n}\r\n\r\n.table-container-pro .menu-search-box {\r\n  position: sticky;\r\n  top: 0;\r\n  z-index: 1;\r\n}\r\n\r\n.table-container-pro .menu-search-box .menu-search-input {\r\n  padding: 5px;\r\n  width: 100%;\r\n}\r\n\r\n.table-container-pro .custom-input {\r\n  margin-right: 10px;\r\n}\r\n\r\n.table-container-pro .custom-button {\r\n  padding: 5px 10px;\r\n  cursor: pointer;\r\n  background-color: var(--table-background-color);\r\n  border: 1px solid var(--table-text-color);\r\n  color: var(--table-text-color);\r\n  border-radius: 3px;\r\n}\r\n\r\n.table-container-pro select {\r\n  background-color: var(--table-background-color);\r\n  color: var(--table-text-color);\r\n}\r\n\r\n.table-container-pro .menu-dropdown-icon svg {\r\n  float: right !important;\r\n  margin-left: 15px;\r\n}\r\n\r\n.table-container-pro .history-container .user {\r\n  padding: 16px;\r\n}\r\n\r\n.table-container-pro .history-container .user-info {\r\n  display: flex;\r\n  align-items: center;\r\n  margin-bottom: 10px;\r\n}\r\n\r\n.table-container-pro .history-container h3 {\r\n  margin: 0;\r\n  margin-bottom: 20px;\r\n}\r\n\r\n.table-container-pro .history-container .user-info p,\r\n.table-container-pro .history-container .user-info h4 {\r\n  margin: 0;\r\n  margin-right: 20px;\r\n}\r\n\r\n.table-container-pro .history-item {\r\n  display: flex;\r\n  align-items: flex-start;\r\n  margin-bottom: 20px;\r\n  position: relative;\r\n}\r\n\r\n.table-container-pro .history-content {\r\n  padding: 15px;\r\n  border-radius: 8px;\r\n  background-color: var(--table-background-color);\r\n  border: 1px solid var(--table-text-color);\r\n  width: 100%;\r\n}\r\n\r\n.table-container-pro .date {\r\n  font-size: 14px;\r\n  color: var(--table-text-color);\r\n  opacity: 0.8;\r\n  margin-bottom: 5px;\r\n}\r\n\r\n.table-container-pro .event {\r\n  font-size: 16px;\r\n  color: var(--table-text-color);\r\n  margin: 0;\r\n}\r\n", ""]);
 // Exports
 module.exports = exports;
 
@@ -511,6 +511,9 @@ function toComment(sourceMap) {
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
+// EXTERNAL MODULE: ./src/index.css
+var src = __webpack_require__(1);
+
 // EXTERNAL MODULE: external "react"
 var external_react_ = __webpack_require__(0);
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
@@ -578,13 +581,13 @@ var MenuIcon_MenuIcon = function MenuIcon() {
 var UpIcon_UpIcon = function UpIcon() {
   return /*#__PURE__*/external_react_default.a.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "0 0 320 512",
+    viewBox: "0 0 448 512",
     height: "16",
     style: {
       marginTop: "4px"
     }
   }, /*#__PURE__*/external_react_default.a.createElement("path", {
-    d: "M182.6 137.4c-12.5-12.5-32.8-12.5-45.3 0l-128 128c-9.2 9.2-11.9 22.9-6.9 34.9s16.6 19.8 29.6 19.8l256 0c12.9 0 24.6-7.8 29.6-19.8s2.2-25.7-6.9-34.9l-128-128z"
+    d: "M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"
   }));
 };
 /* harmony default export */ var svg_UpIcon = (UpIcon_UpIcon);
@@ -593,13 +596,13 @@ var UpIcon_UpIcon = function UpIcon() {
 var DownIcon_DownIcon = function DownIcon() {
   return /*#__PURE__*/external_react_default.a.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
-    viewBox: "0 0 320 512",
+    viewBox: "0 0 448 512",
     height: "16",
     style: {
-      marginTop: "2px"
+      marginTop: "4px"
     }
   }, /*#__PURE__*/external_react_default.a.createElement("path", {
-    d: "M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"
+    d: "M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"
   }));
 };
 /* harmony default export */ var svg_DownIcon = (DownIcon_DownIcon);
@@ -759,7 +762,7 @@ function UserListToolbarsForSearch(_ref) {
     className: "custom-button"
   }, "Search"));
 }
-// CONCATENATED MODULE: ./src/components/PageLeft.jsx
+// CONCATENATED MODULE: ./src/components/svg/PageLeft.jsx
 
 var PageLeft_PageLeft = function PageLeft() {
   return /*#__PURE__*/external_react_default.a.createElement("svg", {
@@ -770,7 +773,7 @@ var PageLeft_PageLeft = function PageLeft() {
     d: "M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160zm352-160l-160 160c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L301.3 256 438.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0z"
   }));
 };
-/* harmony default export */ var components_PageLeft = (PageLeft_PageLeft);
+/* harmony default export */ var svg_PageLeft = (PageLeft_PageLeft);
 // CONCATENATED MODULE: ./src/components/svg/PageRight.jsx
 
 var PageRight_PageRight = function PageRight() {
@@ -826,7 +829,7 @@ var LocalPagination_LocalPagination = function LocalPagination(_ref) {
       paddingLeft: 0,
       paddingRight: "20px"
     }
-  }, /*#__PURE__*/external_react_default.a.createElement(components_PageLeft, null)), /*#__PURE__*/external_react_default.a.createElement("button", {
+  }, /*#__PURE__*/external_react_default.a.createElement(svg_PageLeft, null)), /*#__PURE__*/external_react_default.a.createElement("button", {
     onClick: function onClick() {
       return handleChangePage(page + 1);
     },
@@ -834,7 +837,52 @@ var LocalPagination_LocalPagination = function LocalPagination(_ref) {
   }, /*#__PURE__*/external_react_default.a.createElement(svg_PageRight, null)))));
 };
 /* harmony default export */ var components_LocalPagination = (LocalPagination_LocalPagination);
+// CONCATENATED MODULE: ./src/components/ShowHistory.jsx
+function ShowHistory_toConsumableArray(r) { return ShowHistory_arrayWithoutHoles(r) || ShowHistory_iterableToArray(r) || ShowHistory_unsupportedIterableToArray(r) || ShowHistory_nonIterableSpread(); }
+function ShowHistory_nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function ShowHistory_unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return ShowHistory_arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? ShowHistory_arrayLikeToArray(r, a) : void 0; } }
+function ShowHistory_iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
+function ShowHistory_arrayWithoutHoles(r) { if (Array.isArray(r)) return ShowHistory_arrayLikeToArray(r); }
+function ShowHistory_arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+
+
+
+function ShowHistory(props) {
+  var head = props.head,
+    row = props.row,
+    expandedRows = props.expandedRows,
+    setExpandedRows = props.setExpandedRows,
+    index = props.index;
+  var handleExpandClick = function handleExpandClick(rowId, index) {
+    var isExist = expandedRows.find(function (id) {
+      return id === rowId;
+    });
+    var element = document.getElementsByClassName("history-container")[index];
+    var height = element.offsetHeight;
+    var selectedElement = element.parentElement;
+    if (isExist) {
+      selectedElement.style.maxHeight = 0;
+    } else {
+      selectedElement.style.maxHeight = "".concat(height, "px");
+    }
+    setExpandedRows(function (old) {
+      return old.includes(rowId) ? old.filter(function (id) {
+        return id !== rowId;
+      }) : [].concat(ShowHistory_toConsumableArray(old), [rowId]);
+    });
+  };
+  if (!head || !head.show_history || !head.show_history(row).is_show_history) {
+    return /*#__PURE__*/external_react_default.a.createElement(external_react_default.a.Fragment, null);
+  }
+  return /*#__PURE__*/external_react_default.a.createElement("div", {
+    onClick: function onClick() {
+      return handleExpandClick(row._id, index);
+    },
+    className: "history-div"
+  }, head.show_history(row).icon ? head.show_history(row).icon : expandedRows.includes(row._id) ? /*#__PURE__*/external_react_default.a.createElement(svg_UpIcon, null) : /*#__PURE__*/external_react_default.a.createElement(svg_DownIcon, null));
+}
 // CONCATENATED MODULE: ./src/components/TableBody.jsx
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function TableBody_toConsumableArray(r) { return TableBody_arrayWithoutHoles(r) || TableBody_iterableToArray(r) || TableBody_unsupportedIterableToArray(r) || TableBody_nonIterableSpread(); }
 function TableBody_nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
 function TableBody_iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
@@ -849,300 +897,21 @@ function TableBody_arrayWithHoles(r) { if (Array.isArray(r)) return r; }
 
 
 
+
 var TableBody_TableBody = function TableBody(_ref) {
   var slicedData = _ref.slicedData,
     TABLE_HEAD = _ref.TABLE_HEAD,
     selected = _ref.selected,
     setSelected = _ref.setSelected,
-    selectedBy = _ref.selectedBy,
+    selected_by = _ref.selected_by,
     MENU_OPTIONS = _ref.MENU_OPTIONS,
-    checkboxSelection = _ref.checkboxSelection,
+    checkbox_selection = _ref.checkbox_selection,
     page = _ref.page,
     rowsPerPage = _ref.rowsPerPage;
   var _useState = Object(external_react_["useState"])([]),
     _useState2 = TableBody_slicedToArray(_useState, 2),
     expandedRows = _useState2[0],
     setExpandedRows = _useState2[1];
-
-  // Handle row selection
-  var handleClick = function handleClick(row) {
-    var isSelected = selected.some(function (item) {
-      return selectedBy ? item[selectedBy] === row[selectedBy] : item._id === row._id;
-    });
-    if (isSelected) {
-      setSelected(selected.filter(function (item) {
-        return selectedBy ? item[selectedBy] !== row[selectedBy] : item._id !== row._id;
-      }));
-    } else {
-      setSelected([].concat(TableBody_toConsumableArray(selected), [row]));
-    }
-  };
-
-  // Handle row expansion for additional content
-  var handleExpandClick = function handleExpandClick(rowId, index) {
-    var isExist = expandedRows.find(function (id) {
-      return id === rowId;
-    });
-    var element = document.getElementsByClassName("history-container")[index];
-    if (element) {
-      var height = element.offsetHeight;
-      var selectedElement = element.parentElement;
-      if (isExist) {
-        selectedElement.style.maxHeight = 0;
-      } else {
-        selectedElement.style.maxHeight = "".concat(height, "px");
-      }
-    }
-    setExpandedRows(function (old) {
-      return old.includes(rowId) ? old.filter(function (id) {
-        return id !== rowId;
-      }) : [].concat(TableBody_toConsumableArray(old), [rowId]);
-    });
-  };
-
-  // Render table cell based on column type
-  var renderCell = function renderCell(row, head, index) {
-    var _row$head$id, _row$head$id2, _row$head$id3, _row$head$id4;
-    switch (head.type) {
-      case "checkbox":
-        return /*#__PURE__*/external_react_default.a.createElement("td", {
-          className: head.className,
-          key: index
-        }, /*#__PURE__*/external_react_default.a.createElement("input", {
-          type: "checkbox",
-          checked: row[head.id],
-          className: "cursor-pointer input-checkbox",
-          onChange: function onChange(e) {
-            var _head$handleClick;
-            return (_head$handleClick = head.handleClick) === null || _head$handleClick === void 0 ? void 0 : _head$handleClick.call(head, e, row, index);
-          }
-        }));
-      case "radio_button":
-        return /*#__PURE__*/external_react_default.a.createElement("td", {
-          className: head.className,
-          key: index
-        }, /*#__PURE__*/external_react_default.a.createElement("input", {
-          type: "radio",
-          checked: row[head.id],
-          className: "cursor-pointer input-checkbox",
-          onChange: function onChange(e) {
-            var _head$handleClick2;
-            return (_head$handleClick2 = head.handleClick) === null || _head$handleClick2 === void 0 ? void 0 : _head$handleClick2.call(head, e, row, index);
-          }
-        }));
-      case "row_calendar":
-        return row.is_show_calendar ? /*#__PURE__*/external_react_default.a.createElement("td", {
-          className: head.className,
-          key: index
-        }, /*#__PURE__*/external_react_default.a.createElement("input", {
-          type: "date",
-          className: "".concat(head.className, " date-picker"),
-          onChange: function onChange(date) {
-            var _head$handleChangeDat;
-            return (_head$handleChangeDat = head.handleChangeDate) === null || _head$handleChangeDat === void 0 ? void 0 : _head$handleChangeDat.call(head, date, index, row);
-          },
-          value: row[head.id]
-        })) : /*#__PURE__*/external_react_default.a.createElement("td", {
-          key: index
-        });
-      case "number":
-        return /*#__PURE__*/external_react_default.a.createElement("td", {
-          className: head.className,
-          key: index
-        }, /*#__PURE__*/external_react_default.a.createElement("span", {
-          className: "number-div ".concat(row.className),
-          onClick: function onClick() {
-            if (head.handleClick) {
-              head.handleClick(row, index);
-            }
-          }
-        }, head.show_history(row).is_show_history ? /*#__PURE__*/external_react_default.a.createElement(external_react_default.a.Fragment, null, /*#__PURE__*/external_react_default.a.createElement("div", {
-          onClick: function onClick() {
-            return handleExpandClick(row._id, index);
-          },
-          className: "history-div"
-        }, head.show_history(row).icon ? head.show_history(row).icon : expandedRows.includes(row._id) ? /*#__PURE__*/external_react_default.a.createElement(svg_UpIcon, null) : /*#__PURE__*/external_react_default.a.createElement(svg_DownIcon, null))) : null, index + 1 + rowsPerPage * page));
-      case "row_status":
-        return /*#__PURE__*/external_react_default.a.createElement("td", {
-          className: head.className,
-          key: index
-        }, /*#__PURE__*/external_react_default.a.createElement("div", {
-          className: row[head.id] ? "custom-chip-success ".concat(row.className) : "custom-chip-error",
-          onClick: function onClick() {
-            var _head$handleClick3;
-            return (_head$handleClick3 = head.handleClick) === null || _head$handleClick3 === void 0 ? void 0 : _head$handleClick3.call(head, row, index);
-          }
-        }, row[head.id] ? "Active" : "Inactive"));
-      case "thumbnail":
-        return /*#__PURE__*/external_react_default.a.createElement("td", {
-          className: "head.className",
-          key: index
-        }, (_row$head$id = row[head.id]) !== null && _row$head$id !== void 0 && _row$head$id.src ? /*#__PURE__*/external_react_default.a.createElement("img", {
-          className: "image-avatar",
-          alt: (_row$head$id2 = row[head.id]) === null || _row$head$id2 === void 0 ? void 0 : _row$head$id2.alt,
-          src: (_row$head$id3 = row[head.id]) === null || _row$head$id3 === void 0 ? void 0 : _row$head$id3.src
-        }) : /*#__PURE__*/external_react_default.a.createElement("div", {
-          className: "image-avatar"
-        }, (_row$head$id4 = row[head.id]) === null || _row$head$id4 === void 0 ? void 0 : _row$head$id4.alt[0]));
-      case "link":
-        return /*#__PURE__*/external_react_default.a.createElement("td", {
-          className: head.className,
-          key: index
-        }, row[head.id].show_text ? /*#__PURE__*/external_react_default.a.createElement("a", {
-          href: row[head.id].to,
-          className: row[head.id].className,
-          target: row[head.id].target
-        }, row[head.id].show_text) : row[head.id].show_alternate_text);
-      case "action":
-        var options = typeof MENU_OPTIONS === "function" ? MENU_OPTIONS(row) : MENU_OPTIONS;
-        return /*#__PURE__*/external_react_default.a.createElement("td", {
-          className: head.className,
-          key: index
-        }, (options === null || options === void 0 ? void 0 : options.length) > 0 && /*#__PURE__*/external_react_default.a.createElement(CustomPopoverSection, {
-          menu: options,
-          data: row
-        }));
-      case "html":
-        return /*#__PURE__*/external_react_default.a.createElement("td", {
-          className: head.className,
-          key: index
-        }, /*#__PURE__*/external_react_default.a.createElement("div", {
-          className: row.className,
-          dangerouslySetInnerHTML: {
-            __html: row[head.id]
-          }
-        }));
-      default:
-        return /*#__PURE__*/external_react_default.a.createElement("td", {
-          className: head.className,
-          key: index
-        }, head.renderData ? head.renderData(row, index) : /*#__PURE__*/external_react_default.a.createElement("span", {
-          className: row.className,
-          onClick: function onClick() {
-            var _head$handleClick4;
-            return (_head$handleClick4 = head.handleClick) === null || _head$handleClick4 === void 0 ? void 0 : _head$handleClick4.call(head, row, index);
-          }
-        }, row[head.id]));
-    }
-  };
-  return /*#__PURE__*/external_react_default.a.createElement("tbody", null, (slicedData === null || slicedData === void 0 ? void 0 : slicedData.length) > 0 ? slicedData.map(function (row, rowIndex) {
-    var isItemSelected = Array.isArray(selected) && selected.some(function (item) {
-      return selectedBy ? item[selectedBy] === row[selectedBy] : item._id === row._id;
-    });
-    return /*#__PURE__*/external_react_default.a.createElement(external_react_default.a.Fragment, {
-      key: rowIndex
-    }, /*#__PURE__*/external_react_default.a.createElement("tr", {
-      tabIndex: -1,
-      role: "checkbox",
-      selected: isItemSelected,
-      "aria-checked": isItemSelected
-    }, checkboxSelection && /*#__PURE__*/external_react_default.a.createElement("td", null, /*#__PURE__*/external_react_default.a.createElement("input", {
-      type: "checkbox",
-      checked: isItemSelected,
-      className: "cursor-pointer input-checkbox",
-      onChange: function onChange() {
-        return handleClick(row);
-      }
-    })), TABLE_HEAD.map(function (head, colIndex) {
-      return renderCell(row, head, colIndex);
-    })), expandedRows.includes(row._id) && /*#__PURE__*/external_react_default.a.createElement("tr", {
-      className: "history-tr",
-      style: {
-        borderBottom: expandedRows.includes(row._id) ? "1px solid" : "none"
-      }
-    }, /*#__PURE__*/external_react_default.a.createElement("td", {
-      colSpan: "10",
-      style: {
-        padding: expandedRows.includes(row._id) ? "16px" : 0
-      }
-    }, /*#__PURE__*/external_react_default.a.createElement("div", {
-      className: "no_hover"
-    }, /*#__PURE__*/external_react_default.a.createElement("div", {
-      className: "history-container"
-    }, TABLE_HEAD.find(function (head) {
-      return head.type === "number";
-    }).show_history(row).component)))));
-  }) : /*#__PURE__*/external_react_default.a.createElement("tr", null, /*#__PURE__*/external_react_default.a.createElement("td", {
-    colSpan: checkboxSelection ? 1 + TABLE_HEAD.length : TABLE_HEAD.length,
-    className: "data-not-found"
-  }, "Data Not Found")));
-};
-/* harmony default export */ var components_TableBody = (TableBody_TableBody);
-// CONCATENATED MODULE: ./src/components/index.js
-
-
-
-
-
-
-
-// EXTERNAL MODULE: ./src/index.css
-var src = __webpack_require__(1);
-
-// CONCATENATED MODULE: ./src/index.js
-function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
-function src_toConsumableArray(r) { return src_arrayWithoutHoles(r) || src_iterableToArray(r) || src_unsupportedIterableToArray(r) || src_nonIterableSpread(); }
-function src_nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function src_iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
-function src_arrayWithoutHoles(r) { if (Array.isArray(r)) return src_arrayLikeToArray(r); }
-function src_slicedToArray(r, e) { return src_arrayWithHoles(r) || src_iterableToArrayLimit(r, e) || src_unsupportedIterableToArray(r, e) || src_nonIterableRest(); }
-function src_nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function src_unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return src_arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? src_arrayLikeToArray(r, a) : void 0; } }
-function src_arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
-function src_iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
-function src_arrayWithHoles(r) { if (Array.isArray(r)) return r; }
-
-
-
-
-
-var src_ReactTable = function ReactTable(_ref) {
-  var data = _ref.data,
-    TABLE_HEAD = _ref.TABLE_HEAD,
-    MENU_OPTIONS = _ref.MENU_OPTIONS,
-    checkbox_selection = _ref.checkbox_selection,
-    isStickyHeader = _ref.isStickyHeader,
-    isHideFooterPagination = _ref.isHideFooterPagination,
-    isHideHeaderPagination = _ref.isHideHeaderPagination,
-    isHideSearch = _ref.isHideSearch,
-    custom_search = _ref.custom_search,
-    className = _ref.className,
-    theme_config = _ref.theme_config;
-  var _useState = Object(external_react_["useState"])(0),
-    _useState2 = src_slicedToArray(_useState, 2),
-    page = _useState2[0],
-    setPage = _useState2[1];
-  var _useState3 = Object(external_react_["useState"])(50),
-    _useState4 = src_slicedToArray(_useState3, 2),
-    rowsPerPage = _useState4[0],
-    setRowsPerPage = _useState4[1];
-  var _useState5 = Object(external_react_["useState"])(""),
-    _useState6 = src_slicedToArray(_useState5, 2),
-    filterName = _useState6[0],
-    setFilterName = _useState6[1];
-  var selected_by = checkbox_selection === null || checkbox_selection === void 0 ? void 0 : checkbox_selection.selected_by;
-  var setSelected = checkbox_selection === null || checkbox_selection === void 0 ? void 0 : checkbox_selection.setSelected;
-  var selected = checkbox_selection === null || checkbox_selection === void 0 ? void 0 : checkbox_selection.selected;
-  var filteredData = data.filter(function (item) {
-    return item.name.toLowerCase().includes(filterName.toLowerCase());
-  });
-  var startIndex = page * rowsPerPage;
-  var endIndex = Math.min(startIndex + rowsPerPage, filteredData.length);
-  var slicedData = filteredData.slice(startIndex, endIndex);
-  var handleFilterByName = function handleFilterByName(event) {
-    setFilterName(event.target.value);
-    setPage(0);
-  };
-  var handleSearchText = function handleSearchText(event) {
-    custom_search.setSearchText(event.target.value);
-  };
-  var handleChangePage = function handleChangePage(newPage) {
-    setPage(newPage);
-  };
-  var handleChangeRowsPerPage = function handleChangeRowsPerPage(event) {
-    setRowsPerPage(parseInt(event.target.value, 10));
-    setPage(0);
-  };
   var handleClick = function handleClick(name) {
     var selectedIndex = selected === null || selected === void 0 ? void 0 : selected.some(function (obj) {
       if (selected_by && selected_by !== "") {
@@ -1162,77 +931,176 @@ var src_ReactTable = function ReactTable(_ref) {
       setSelected(new_array);
     } else {
       setSelected(function (selected) {
-        return [].concat(src_toConsumableArray(selected), [name]);
+        return [].concat(TableBody_toConsumableArray(selected), [name]);
       });
     }
   };
-  var handleSelectAllClick = function handleSelectAllClick(event) {
-    if (event.target.checked) {
-      setSelected(data);
-      return;
-    }
-    setSelected([]);
-  };
-  var _useState7 = Object(external_react_["useState"])([]),
-    _useState8 = src_slicedToArray(_useState7, 2),
-    expandedRows = _useState8[0],
-    setExpandedRows = _useState8[1];
-  var handleExpandClick = function handleExpandClick(rowId, index) {
-    var isExist = expandedRows.find(function (id) {
-      return id === rowId;
-    });
-    var element = document.getElementsByClassName("history-container")[index];
-    var height = element.offsetHeight;
-    var selectedElement = element.parentElement;
-    if (isExist) {
-      selectedElement.style.maxHeight = 0;
+  var historyHead = TABLE_HEAD.find(function (head) {
+    return head.show_history;
+  });
+  var renderCell = function renderCell(row, head, i, index) {
+    var historyObj = {
+      head: head,
+      row: row,
+      index: index,
+      expandedRows: expandedRows,
+      setExpandedRows: setExpandedRows
+    };
+    if (head.type === "checkbox") {
+      return /*#__PURE__*/external_react_default.a.createElement("td", {
+        className: head.className,
+        key: i
+      }, /*#__PURE__*/external_react_default.a.createElement("div", {
+        className: "number-div"
+      }, /*#__PURE__*/external_react_default.a.createElement(ShowHistory, historyObj), /*#__PURE__*/external_react_default.a.createElement("input", {
+        type: "checkbox",
+        checked: row[head.id],
+        className: "cursor-pointer input-checkbox",
+        onChange: function onChange(e) {
+          if (head.handleClick) {
+            head.handleClick(e, row, index);
+          }
+        }
+      })));
+    } else if (head.type === "history") {
+      return /*#__PURE__*/external_react_default.a.createElement("td", {
+        className: head.className,
+        key: i
+      }, /*#__PURE__*/external_react_default.a.createElement(ShowHistory, historyObj));
+    } else if (head.type === "radio_button") {
+      return /*#__PURE__*/external_react_default.a.createElement("td", {
+        className: head.className,
+        key: i
+      }, /*#__PURE__*/external_react_default.a.createElement("div", {
+        className: "number-div"
+      }, /*#__PURE__*/external_react_default.a.createElement(ShowHistory, historyObj), /*#__PURE__*/external_react_default.a.createElement("input", {
+        type: "radio",
+        checked: row[head.id],
+        className: "cursor-pointer input-checkbox",
+        onChange: function onChange(e) {
+          if (head.handleClick) {
+            head.handleClick(e, row, index);
+          }
+        }
+      })));
+    } else if (head.type === "row_calendar") {
+      if (row.is_show_celendar === true) {
+        return /*#__PURE__*/external_react_default.a.createElement("td", {
+          className: head.className,
+          key: i
+        }, /*#__PURE__*/external_react_default.a.createElement("div", {
+          className: "number-div"
+        }, /*#__PURE__*/external_react_default.a.createElement(ShowHistory, historyObj), /*#__PURE__*/external_react_default.a.createElement("input", {
+          type: "date",
+          className: "".concat(head.className, " date-picker"),
+          onChange: function onChange(date) {
+            if (head.handleChangeDate) {
+              head.handleChangeDate(date, index, row);
+            }
+          },
+          value: row[head.id]
+        })));
+      } else {
+        return /*#__PURE__*/external_react_default.a.createElement("td", {
+          key: i
+        });
+      }
+    } else if (head.type === "number") {
+      return /*#__PURE__*/external_react_default.a.createElement("td", {
+        className: head.className,
+        key: i
+      }, /*#__PURE__*/external_react_default.a.createElement("div", {
+        className: "number-div"
+      }, /*#__PURE__*/external_react_default.a.createElement(ShowHistory, historyObj), /*#__PURE__*/external_react_default.a.createElement("span", {
+        className: row.className,
+        onClick: function onClick() {
+          if (head.handleClick) {
+            head.handleClick(row, index);
+          }
+        }
+      }, index + 1 + rowsPerPage * page)));
+    } else if (head.type === "row_status") {
+      return /*#__PURE__*/external_react_default.a.createElement("td", {
+        className: head.className,
+        key: i
+      }, /*#__PURE__*/external_react_default.a.createElement("div", {
+        className: "number-div"
+      }, /*#__PURE__*/external_react_default.a.createElement(ShowHistory, historyObj), /*#__PURE__*/external_react_default.a.createElement("div", {
+        className: "".concat(row[head.id] === true ? "custom-chip-success " + row.className : "custom-chip-error"),
+        onClick: function onClick() {
+          if (head.handleClick) {
+            head.handleClick(row, index);
+          }
+        }
+      }, row[head.id] === true ? "Active" : "Inactive")));
+    } else if (head.type === "thumbnail") {
+      var _row$head$id, _row$head$id2, _row$head$id3, _row$head$id4;
+      return /*#__PURE__*/external_react_default.a.createElement("td", {
+        className: head.className,
+        key: i
+      }, /*#__PURE__*/external_react_default.a.createElement("div", {
+        className: "number-div"
+      }, /*#__PURE__*/external_react_default.a.createElement(ShowHistory, historyObj), (_row$head$id = row[head.id]) !== null && _row$head$id !== void 0 && _row$head$id.src ? /*#__PURE__*/external_react_default.a.createElement("img", {
+        className: "image-avatar",
+        alt: (_row$head$id2 = row[head.id]) === null || _row$head$id2 === void 0 ? void 0 : _row$head$id2.alt,
+        src: (_row$head$id3 = row[head.id]) === null || _row$head$id3 === void 0 ? void 0 : _row$head$id3.src
+      }) : /*#__PURE__*/external_react_default.a.createElement("div", {
+        className: "image_avatar"
+      }, (_row$head$id4 = row[head.id]) === null || _row$head$id4 === void 0 ? void 0 : _row$head$id4.alt[0])));
+    } else if (head.type === "link") {
+      return /*#__PURE__*/external_react_default.a.createElement("td", {
+        className: head.className,
+        key: i
+      }, /*#__PURE__*/external_react_default.a.createElement("div", {
+        className: "number-div"
+      }, /*#__PURE__*/external_react_default.a.createElement(ShowHistory, historyObj), row[head.id].show_text ? /*#__PURE__*/external_react_default.a.createElement("a", {
+        href: row[head.id].to,
+        className: row[head.id].className,
+        target: row[head.id].target
+      }, row[head.id].show_text) : row[head.id].show_alternate_text ? row[head.id].show_alternate_text : ""));
+    } else if (head.type === "action") {
+      var _options;
+      var type_of = _typeof(MENU_OPTIONS);
+      var options = MENU_OPTIONS;
+      if (type_of === "function") {
+        options = MENU_OPTIONS(row);
+      }
+      return /*#__PURE__*/external_react_default.a.createElement("td", {
+        className: head.className,
+        key: i
+      }, /*#__PURE__*/external_react_default.a.createElement("div", {
+        className: "number-div"
+      }, /*#__PURE__*/external_react_default.a.createElement(ShowHistory, historyObj), ((_options = options) === null || _options === void 0 ? void 0 : _options.length) > 0 && /*#__PURE__*/external_react_default.a.createElement(CustomPopoverSection, {
+        menu: options,
+        data: row
+      })));
+    } else if (head.type === "html") {
+      return /*#__PURE__*/external_react_default.a.createElement("td", {
+        className: head.className,
+        key: i
+      }, /*#__PURE__*/external_react_default.a.createElement("div", {
+        className: "number-div"
+      }, /*#__PURE__*/external_react_default.a.createElement(ShowHistory, historyObj), /*#__PURE__*/external_react_default.a.createElement("div", {
+        className: row.className,
+        dangerouslySetInnerHTML: {
+          __html: row[head.id]
+        }
+      })));
     } else {
-      selectedElement.style.maxHeight = "".concat(height, "px");
+      return /*#__PURE__*/external_react_default.a.createElement("td", {
+        className: head.className,
+        key: i
+      }, head.renderData ? head.renderData(row, index) : /*#__PURE__*/external_react_default.a.createElement("span", {
+        className: row.className,
+        onClick: function onClick() {
+          if (head.handleClick) {
+            head.handleClick(row, index);
+          }
+        }
+      }, row[head.id]));
     }
-    setExpandedRows(function (old) {
-      return old.includes(rowId) ? old.filter(function (id) {
-        return id !== rowId;
-      }) : [].concat(src_toConsumableArray(old), [rowId]);
-    });
   };
-  Object(external_react_["useEffect"])(function () {
-    if (theme_config) {
-      document.documentElement.style.setProperty("--table-background-color", theme_config === null || theme_config === void 0 ? void 0 : theme_config.background);
-      document.documentElement.style.setProperty("--table-text-color", theme_config === null || theme_config === void 0 ? void 0 : theme_config.color);
-      document.documentElement.style.setProperty("--table-svg-color", theme_config === null || theme_config === void 0 ? void 0 : theme_config.iconColor);
-    }
-  }, [theme_config]);
-  return /*#__PURE__*/external_react_default.a.createElement("div", {
-    className: "table-container-pro ".concat(className ? className : "", " ").concat(isStickyHeader ? "sticky-header" : "")
-    // onScroll={trackScrollLeft}
-  }, !isHideSearch && !isHideHeaderPagination && /*#__PURE__*/external_react_default.a.createElement("div", {
-    className: "thead-container-pro"
-  }, /*#__PURE__*/external_react_default.a.createElement("div", {
-    className: "pagination-container"
-  }, !isHideHeaderPagination && /*#__PURE__*/external_react_default.a.createElement(components_LocalPagination, {
-    rowsPerPage: rowsPerPage,
-    handleChangeRowsPerPage: handleChangeRowsPerPage,
-    filteredData: filteredData,
-    handleChangePage: handleChangePage,
-    page: page
-  })), /*#__PURE__*/external_react_default.a.createElement("div", {
-    className: "table-search"
-  }, custom_search ? /*#__PURE__*/external_react_default.a.createElement(UserListToolbarsForSearch, {
-    filterName: custom_search.searchText,
-    onFilterName: handleSearchText,
-    handleSubmit: custom_search.handleSubmit
-  }) : /*#__PURE__*/external_react_default.a.createElement(external_react_default.a.Fragment, null, !isHideSearch && /*#__PURE__*/external_react_default.a.createElement(UserListToolbar, {
-    filterName: filterName,
-    onFilterName: handleFilterByName
-  })))), /*#__PURE__*/external_react_default.a.createElement("table", {
-    className: "responsive-table-pro"
-  }, /*#__PURE__*/external_react_default.a.createElement("thead", null, /*#__PURE__*/external_react_default.a.createElement(TableHeadList, {
-    headLabel: TABLE_HEAD,
-    rowCount: filteredData.length,
-    numSelected: checkbox_selection && (selected === null || selected === void 0 ? void 0 : selected.length),
-    checkbox_selection: checkbox_selection,
-    handleSelectAllClick: handleSelectAllClick
-  })), slicedData.length > 0 ? /*#__PURE__*/external_react_default.a.createElement("tbody", null, slicedData.map(function (row, index) {
+  return /*#__PURE__*/external_react_default.a.createElement(external_react_default.a.Fragment, null, slicedData.length > 0 ? /*#__PURE__*/external_react_default.a.createElement("tbody", null, slicedData.map(function (row, index) {
     var isItemSelected = (selected === null || selected === void 0 ? void 0 : selected.length) < 1 ? false : selected === null || selected === void 0 ? void 0 : selected.some(function (obj) {
       if (selected_by && selected_by !== "") {
         return obj[selected_by] === row[selected_by];
@@ -1255,160 +1123,159 @@ var src_ReactTable = function ReactTable(_ref) {
         return handleClick(row);
       }
     })), TABLE_HEAD.map(function (head, i) {
-      if (head.type === "checkbox") {
-        return /*#__PURE__*/external_react_default.a.createElement("td", {
-          className: head.className,
-          key: i
-        }, /*#__PURE__*/external_react_default.a.createElement("input", {
-          type: "checkbox",
-          checked: row[head.id],
-          className: "cursor-pointer input-checkbox",
-          onChange: function onChange(e) {
-            if (head.handleClick) {
-              head.handleClick(e, row, index);
-            }
-          }
-        }));
-      } else if (head.type === "radio_button") {
-        return /*#__PURE__*/external_react_default.a.createElement("td", {
-          className: head.className,
-          key: i
-        }, /*#__PURE__*/external_react_default.a.createElement("input", {
-          type: "radio",
-          checked: row[head.id],
-          className: "cursor-pointer input-checkbox",
-          onChange: function onChange(e) {
-            if (head.handleClick) {
-              head.handleClick(e, row, index);
-            }
-          }
-        }));
-      } else if (head.type === "row_calendar") {
-        if (row.is_show_celendar === true) {
-          return /*#__PURE__*/external_react_default.a.createElement("td", {
-            className: head.className,
-            key: i
-          }, /*#__PURE__*/external_react_default.a.createElement("input", {
-            type: "date",
-            className: "".concat(head.className, " date-picker"),
-            onChange: function onChange(date) {
-              if (head.handleChangeDate) {
-                head.handleChangeDate(date, index, row);
-              }
-            },
-            value: row[head.id]
-          }));
-        } else {
-          return /*#__PURE__*/external_react_default.a.createElement("td", {
-            key: i
-          });
-        }
-      } else if (head.type === "number") {
-        return /*#__PURE__*/external_react_default.a.createElement("td", {
-          className: head.className,
-          key: i
-        }, /*#__PURE__*/external_react_default.a.createElement("span", {
-          className: "number-div ".concat(row.className),
-          onClick: function onClick() {
-            if (head.handleClick) {
-              head.handleClick(row, index);
-            }
-          }
-        }, head.show_history(row).is_show_history ? /*#__PURE__*/external_react_default.a.createElement(external_react_default.a.Fragment, null, /*#__PURE__*/external_react_default.a.createElement("div", {
-          onClick: function onClick() {
-            return handleExpandClick(row._id, index);
-          },
-          className: "history-div"
-        }, head.show_history(row).icon ? head.show_history(row).icon : expandedRows.includes(row._id) ? /*#__PURE__*/external_react_default.a.createElement(svg_UpIcon, null) : /*#__PURE__*/external_react_default.a.createElement(svg_DownIcon, null))) : null, index + 1 + rowsPerPage * page));
-      } else if (head.type === "row_status") {
-        return /*#__PURE__*/external_react_default.a.createElement("td", {
-          className: head.className,
-          key: i
-        }, /*#__PURE__*/external_react_default.a.createElement("div", {
-          className: "".concat(row[head.id] === true ? "custom-chip-success " + row.className : "custom-chip-error"),
-          onClick: function onClick() {
-            if (head.handleClick) {
-              head.handleClick(row, index);
-            }
-          }
-        }, row[head.id] === true ? "Active" : "Inactive"));
-      } else if (head.type === "thumbnail") {
-        var _row$head$id, _row$head$id2, _row$head$id3, _row$head$id4;
-        return /*#__PURE__*/external_react_default.a.createElement("td", {
-          className: "head.className",
-          key: i
-        }, (_row$head$id = row[head.id]) !== null && _row$head$id !== void 0 && _row$head$id.src ? /*#__PURE__*/external_react_default.a.createElement("img", {
-          className: "image-avatar",
-          alt: (_row$head$id2 = row[head.id]) === null || _row$head$id2 === void 0 ? void 0 : _row$head$id2.alt,
-          src: (_row$head$id3 = row[head.id]) === null || _row$head$id3 === void 0 ? void 0 : _row$head$id3.src
-        }) : /*#__PURE__*/external_react_default.a.createElement("div", {
-          className: "image_avatar"
-        }, (_row$head$id4 = row[head.id]) === null || _row$head$id4 === void 0 ? void 0 : _row$head$id4.alt[0]));
-      } else if (head.type === "link") {
-        return /*#__PURE__*/external_react_default.a.createElement("td", {
-          className: head.className,
-          key: i
-        }, row[head.id].show_text ? /*#__PURE__*/external_react_default.a.createElement("a", {
-          href: row[head.id].to,
-          className: row[head.id].className,
-          target: row[head.id].target
-        }, row[head.id].show_text) : row[head.id].show_alternate_text ? row[head.id].show_alternate_text : "");
-      } else if (head.type === "action") {
-        var _options;
-        var type_of = _typeof(MENU_OPTIONS);
-        var options = MENU_OPTIONS;
-        if (type_of === "function") {
-          options = MENU_OPTIONS(row);
-        }
-        return /*#__PURE__*/external_react_default.a.createElement("td", {
-          className: head.className,
-          key: i
-        }, ((_options = options) === null || _options === void 0 ? void 0 : _options.length) > 0 && /*#__PURE__*/external_react_default.a.createElement(CustomPopoverSection, {
-          menu: options,
-          data: row
-        }));
-      } else if (head.type === "html") {
-        return /*#__PURE__*/external_react_default.a.createElement("td", {
-          className: head.className,
-          key: i
-        }, /*#__PURE__*/external_react_default.a.createElement("div", {
-          className: row.className,
-          dangerouslySetInnerHTML: {
-            __html: row[head.id]
-          }
-        }));
-      } else {
-        return /*#__PURE__*/external_react_default.a.createElement("td", {
-          className: head.className,
-          key: i
-        }, head.renderData ? head.renderData(row, index) : /*#__PURE__*/external_react_default.a.createElement("span", {
-          className: row.className,
-          onClick: function onClick() {
-            if (head.handleClick) {
-              head.handleClick(row, index);
-            }
-          }
-        }, row[head.id]));
-      }
+      return renderCell(row, head, i, index);
     })), /*#__PURE__*/external_react_default.a.createElement("tr", {
       className: "history-tr",
       style: {
         borderBottom: expandedRows.includes(row._id) ? "1px solid" : "none"
       }
     }, /*#__PURE__*/external_react_default.a.createElement("td", {
-      colSpan: "10",
+      colSpan: TABLE_HEAD.length,
       style: {
-        padding: expandedRows.includes(row._id) ? "16px" : 0
+        padding: 0
       }
     }, /*#__PURE__*/external_react_default.a.createElement("div", {
       className: "no_hover"
-    }, TABLE_HEAD.find(function (head) {
-      return head.type === "number";
-    }).show_history(row).component))));
+    }, /*#__PURE__*/external_react_default.a.createElement("div", {
+      className: "history-container"
+    }, historyHead ? historyHead.show_history(row).component : "")))));
   })) : /*#__PURE__*/external_react_default.a.createElement("tbody", null, /*#__PURE__*/external_react_default.a.createElement("tr", null, /*#__PURE__*/external_react_default.a.createElement("td", {
     colSpan: checkbox_selection ? 1 + TABLE_HEAD.length : TABLE_HEAD.length,
     className: "data-not-found"
-  }, "Data Not Found")))), !isHideFooterPagination && /*#__PURE__*/external_react_default.a.createElement(components_LocalPagination, {
+  }, "Data Not Found"))));
+};
+/* harmony default export */ var components_TableBody = (TableBody_TableBody);
+// CONCATENATED MODULE: ./src/components/index.js
+
+
+
+
+
+
+
+// CONCATENATED MODULE: ./src/index.js
+function src_slicedToArray(r, e) { return src_arrayWithHoles(r) || src_iterableToArrayLimit(r, e) || src_unsupportedIterableToArray(r, e) || src_nonIterableRest(); }
+function src_nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function src_unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return src_arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? src_arrayLikeToArray(r, a) : void 0; } }
+function src_arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+function src_iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function src_arrayWithHoles(r) { if (Array.isArray(r)) return r; }
+
+
+
+var applyThemeConfig = function applyThemeConfig(themeConfig) {
+  var setThemeProperty = function setThemeProperty(property, value) {
+    document.documentElement.style.setProperty(property, value);
+  };
+  if (themeConfig) {
+    setThemeProperty("--table-background-color", themeConfig.background);
+    setThemeProperty("--table-text-color", themeConfig.color);
+    setThemeProperty("--table-svg-color", themeConfig.iconColor);
+  }
+};
+var filterDataByName = function filterDataByName(data, filterName) {
+  return data.filter(function (item) {
+    return item.name.toLowerCase().includes(filterName.toLowerCase());
+  });
+};
+var sliceData = function sliceData(data, page, rowsPerPage) {
+  var startIndex = page * rowsPerPage;
+  var endIndex = Math.min(startIndex + rowsPerPage, data.length);
+  return data.slice(startIndex, endIndex);
+};
+var src_ReactTable = function ReactTable(_ref) {
+  var data = _ref.data,
+    TABLE_HEAD = _ref.TABLE_HEAD,
+    MENU_OPTIONS = _ref.MENU_OPTIONS,
+    checkbox_selection = _ref.checkbox_selection,
+    is_Sticky_Header = _ref.is_Sticky_Header,
+    is_Hide_Footer_Pagination = _ref.is_Hide_Footer_Pagination,
+    is_Hide_Header_Pagination = _ref.is_Hide_Header_Pagination,
+    is_Hide_Search = _ref.is_Hide_Search,
+    custom_search = _ref.custom_search,
+    class_Name = _ref.class_Name,
+    theme_config = _ref.theme_config;
+  var _useState = Object(external_react_["useState"])(0),
+    _useState2 = src_slicedToArray(_useState, 2),
+    page = _useState2[0],
+    setPage = _useState2[1];
+  var _useState3 = Object(external_react_["useState"])(50),
+    _useState4 = src_slicedToArray(_useState3, 2),
+    rowsPerPage = _useState4[0],
+    setRowsPerPage = _useState4[1];
+  var _useState5 = Object(external_react_["useState"])(""),
+    _useState6 = src_slicedToArray(_useState5, 2),
+    filterName = _useState6[0],
+    setFilterName = _useState6[1];
+  var selected_by = checkbox_selection === null || checkbox_selection === void 0 ? void 0 : checkbox_selection.selected_by;
+  var setSelected = checkbox_selection === null || checkbox_selection === void 0 ? void 0 : checkbox_selection.setSelected;
+  var selected = checkbox_selection === null || checkbox_selection === void 0 ? void 0 : checkbox_selection.selected;
+  var filteredData = filterDataByName(data, filterName);
+  var slicedData = sliceData(filteredData, page, rowsPerPage);
+  var handleFilterByName = function handleFilterByName(event) {
+    setFilterName(event.target.value);
+    setPage(0);
+  };
+  var handleSearchText = function handleSearchText(event) {
+    custom_search.setSearchText(event.target.value);
+  };
+  var handleChangePage = function handleChangePage(newPage) {
+    setPage(newPage);
+  };
+  var handleChangeRowsPerPage = function handleChangeRowsPerPage(event) {
+    setRowsPerPage(parseInt(event.target.value, 10));
+    setPage(0);
+  };
+  var handleSelectAllClick = function handleSelectAllClick(event) {
+    if (event.target.checked) {
+      setSelected(data);
+      return;
+    }
+    setSelected([]);
+  };
+  Object(external_react_["useEffect"])(function () {
+    applyThemeConfig(theme_config);
+  }, [theme_config]);
+  return /*#__PURE__*/external_react_default.a.createElement("div", {
+    className: "table-container-pro ".concat(class_Name ? class_Name : "", " ").concat(is_Sticky_Header ? "sticky-header" : "")
+  }, !is_Hide_Search && !is_Hide_Header_Pagination && /*#__PURE__*/external_react_default.a.createElement("div", {
+    className: "thead-container-pro"
+  }, /*#__PURE__*/external_react_default.a.createElement("div", {
+    className: "pagination-container"
+  }, !is_Hide_Header_Pagination && /*#__PURE__*/external_react_default.a.createElement(components_LocalPagination, {
+    rowsPerPage: rowsPerPage,
+    handleChangeRowsPerPage: handleChangeRowsPerPage,
+    filteredData: filteredData,
+    handleChangePage: handleChangePage,
+    page: page
+  })), /*#__PURE__*/external_react_default.a.createElement("div", {
+    className: "table-search"
+  }, custom_search ? /*#__PURE__*/external_react_default.a.createElement(UserListToolbarsForSearch, {
+    filterName: custom_search.searchText,
+    onFilterName: handleSearchText,
+    handleSubmit: custom_search.handleSubmit
+  }) : /*#__PURE__*/external_react_default.a.createElement(external_react_default.a.Fragment, null, !is_Hide_Search && /*#__PURE__*/external_react_default.a.createElement(UserListToolbar, {
+    filterName: filterName,
+    onFilterName: handleFilterByName
+  })))), /*#__PURE__*/external_react_default.a.createElement("table", {
+    className: "responsive-table-pro"
+  }, /*#__PURE__*/external_react_default.a.createElement("thead", null, /*#__PURE__*/external_react_default.a.createElement(TableHeadList, {
+    headLabel: TABLE_HEAD,
+    rowCount: filteredData.length,
+    numSelected: checkbox_selection && (selected === null || selected === void 0 ? void 0 : selected.length),
+    checkbox_selection: checkbox_selection,
+    handleSelectAllClick: handleSelectAllClick
+  })), /*#__PURE__*/external_react_default.a.createElement(components_TableBody, {
+    slicedData: slicedData,
+    TABLE_HEAD: TABLE_HEAD,
+    selected: selected,
+    setSelected: setSelected,
+    selected_by: selected_by,
+    MENU_OPTIONS: MENU_OPTIONS,
+    checkbox_selection: checkbox_selection,
+    page: page,
+    rowsPerPage: rowsPerPage
+  })), !is_Hide_Footer_Pagination && /*#__PURE__*/external_react_default.a.createElement(components_LocalPagination, {
     rowsPerPage: rowsPerPage,
     handleChangeRowsPerPage: handleChangeRowsPerPage,
     filteredData: filteredData,

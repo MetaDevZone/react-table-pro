@@ -2,144 +2,158 @@ import React, { useState } from "react";
 import UpIcon from "./svg/UpIcon";
 import DownIcon from "./svg/DownIcon";
 import CustomPopoverSection from "./CustomPopoverSection";
+import ShowHistory from "./ShowHistory";
 
 const TableBody = ({
   slicedData,
   TABLE_HEAD,
   selected,
   setSelected,
-  selectedBy,
+  selected_by,
   MENU_OPTIONS,
-  checkboxSelection,
+  checkbox_selection,
   page,
   rowsPerPage,
 }) => {
   const [expandedRows, setExpandedRows] = useState([]);
 
-  // Handle row selection
-  const handleClick = (row) => {
-    const isSelected = selected.some((item) =>
-      selectedBy ? item[selectedBy] === row[selectedBy] : item._id === row._id
-    );
-
-    if (isSelected) {
-      setSelected(
-        selected.filter((item) =>
-          selectedBy
-            ? item[selectedBy] !== row[selectedBy]
-            : item._id !== row._id
-        )
-      );
-    } else {
-      setSelected([...selected, row]);
-    }
-  };
-
-  // Handle row expansion for additional content
-  const handleExpandClick = (rowId, index) => {
-    let isExist = expandedRows.find((id) => id === rowId);
-    let element = document.getElementsByClassName("history-container")[index];
-    if (element) {
-      let height = element.offsetHeight;
-      let selectedElement = element.parentElement;
-      if (isExist) {
-        selectedElement.style.maxHeight = 0;
+  const handleClick = (name) => {
+    const selectedIndex = selected?.some((obj) => {
+      if (selected_by && selected_by !== "") {
+        return obj[selected_by] === name[selected_by];
       } else {
-        selectedElement.style.maxHeight = `${height}px`;
+        return obj._id === name._id;
       }
+    });
+
+    if (selectedIndex === true) {
+      let new_array = selected.filter((item) => {
+        if (selected_by && selected_by !== "") {
+          return item[selected_by] !== name[selected_by];
+        } else {
+          return item._id !== name._id;
+        }
+      });
+      setSelected(new_array);
+    } else {
+      setSelected((selected) => [...selected, name]);
     }
-    setExpandedRows((old) =>
-      old.includes(rowId) ? old.filter((id) => id !== rowId) : [...old, rowId]
-    );
   };
 
-  // Render table cell based on column type
-  const renderCell = (row, head, index) => {
-    switch (head.type) {
-      case "checkbox":
-        return (
-          <td className={head.className} key={index}>
+  const historyHead = TABLE_HEAD.find((head) => head.show_history);
+
+  const renderCell = (row, head, i, index) => {
+    let historyObj = { head, row, index, expandedRows, setExpandedRows };
+
+    if (head.type === "checkbox") {
+      return (
+        <td className={head.className} key={i}>
+          <div className="number-div">
+            <ShowHistory {...historyObj} />
             <input
               type="checkbox"
               checked={row[head.id]}
               className="cursor-pointer input-checkbox"
-              onChange={(e) => head.handleClick?.(e, row, index)}
+              onChange={(e) => {
+                if (head.handleClick) {
+                  head.handleClick(e, row, index);
+                }
+              }}
             />
-          </td>
-        );
-      case "radio_button":
-        return (
-          <td className={head.className} key={index}>
+          </div>
+        </td>
+      );
+    } else if (head.type === "history") {
+      return (
+        <td className={head.className} key={i}>
+          <ShowHistory {...historyObj} />
+        </td>
+      );
+    } else if (head.type === "radio_button") {
+      return (
+        <td className={head.className} key={i}>
+          <div className="number-div">
+            <ShowHistory {...historyObj} />
             <input
               type="radio"
               checked={row[head.id]}
               className="cursor-pointer input-checkbox"
-              onChange={(e) => head.handleClick?.(e, row, index)}
+              onChange={(e) => {
+                if (head.handleClick) {
+                  head.handleClick(e, row, index);
+                }
+              }}
             />
-          </td>
-        );
-      case "row_calendar":
-        return row.is_show_calendar ? (
-          <td className={head.className} key={index}>
-            <input
-              type="date"
-              className={`${head.className} date-picker`}
-              onChange={(date) => head.handleChangeDate?.(date, index, row)}
-              value={row[head.id]}
-            />
-          </td>
-        ) : (
-          <td key={index}></td>
-        );
-      case "number":
+          </div>
+        </td>
+      );
+    } else if (head.type === "row_calendar") {
+      if (row.is_show_celendar === true) {
         return (
-          <td className={head.className} key={index}>
+          <td className={head.className} key={i}>
+            <div className="number-div">
+              <ShowHistory {...historyObj} />
+              <input
+                type="date"
+                className={`${head.className} date-picker`}
+                onChange={(date) => {
+                  if (head.handleChangeDate) {
+                    head.handleChangeDate(date, index, row);
+                  }
+                }}
+                value={row[head.id]}
+              />
+            </div>
+          </td>
+        );
+      } else {
+        return <td key={i}></td>;
+      }
+    } else if (head.type === "number") {
+      return (
+        <td className={head.className} key={i}>
+          <div className="number-div">
+            <ShowHistory {...historyObj} />
             <span
-              className={`number-div ${row.className}`}
+              className={row.className}
               onClick={() => {
                 if (head.handleClick) {
                   head.handleClick(row, index);
                 }
               }}
             >
-              {head.show_history(row).is_show_history ? (
-                <>
-                  <div
-                    onClick={() => handleExpandClick(row._id, index)}
-                    className="history-div"
-                  >
-                    {head.show_history(row).icon ? (
-                      head.show_history(row).icon
-                    ) : expandedRows.includes(row._id) ? (
-                      <UpIcon />
-                    ) : (
-                      <DownIcon />
-                    )}
-                  </div>
-                </>
-              ) : null}
               {index + 1 + rowsPerPage * page}
             </span>
-          </td>
-        );
-      case "row_status":
-        return (
-          <td className={head.className} key={index}>
+          </div>
+        </td>
+      );
+    } else if (head.type === "row_status") {
+      return (
+        <td className={head.className} key={i}>
+          <div className="number-div">
+            <ShowHistory {...historyObj} />
             <div
-              className={
-                row[head.id]
-                  ? `custom-chip-success ${row.className}`
+              className={`${
+                row[head.id] === true
+                  ? "custom-chip-success " + row.className
                   : "custom-chip-error"
-              }
-              onClick={() => head.handleClick?.(row, index)}
+              }`}
+              onClick={() => {
+                if (head.handleClick) {
+                  head.handleClick(row, index);
+                }
+              }}
             >
-              {row[head.id] ? "Active" : "Inactive"}
+              {row[head.id] === true ? "Active" : "Inactive"}
             </div>
-          </td>
-        );
-      case "thumbnail":
-        return (
-          <td className="head.className" key={index}>
+          </div>
+        </td>
+      );
+    } else if (head.type === "thumbnail") {
+      return (
+        <td className={head.className} key={i}>
+          <div className="number-div">
+            <ShowHistory {...historyObj} />
             {row[head.id]?.src ? (
               <img
                 className="image-avatar"
@@ -147,13 +161,16 @@ const TableBody = ({
                 src={row[head.id]?.src}
               />
             ) : (
-              <div className="image-avatar">{row[head.id]?.alt[0]}</div>
+              <div className="image_avatar">{row[head.id]?.alt[0]}</div>
             )}
-          </td>
-        );
-      case "link":
-        return (
-          <td className={head.className} key={index}>
+          </div>
+        </td>
+      );
+    } else if (head.type === "link") {
+      return (
+        <td className={head.className} key={i}>
+          <div className="number-div">
+            <ShowHistory {...historyObj} />
             {row[head.id].show_text ? (
               <a
                 href={row[head.id].to}
@@ -162,83 +179,104 @@ const TableBody = ({
               >
                 {row[head.id].show_text}
               </a>
-            ) : (
+            ) : row[head.id].show_alternate_text ? (
               row[head.id].show_alternate_text
+            ) : (
+              ""
             )}
-          </td>
-        );
-      case "action":
-        const options =
-          typeof MENU_OPTIONS === "function" ? MENU_OPTIONS(row) : MENU_OPTIONS;
-        return (
-          <td className={head.className} key={index}>
+          </div>
+        </td>
+      );
+    } else if (head.type === "action") {
+      let type_of = typeof MENU_OPTIONS;
+      let options = MENU_OPTIONS;
+      if (type_of === "function") {
+        options = MENU_OPTIONS(row);
+      }
+      return (
+        <td className={head.className} key={i}>
+          <div className="number-div">
+            <ShowHistory {...historyObj} />
             {options?.length > 0 && (
               <CustomPopoverSection menu={options} data={row} />
             )}
-          </td>
-        );
-      case "html":
-        return (
-          <td className={head.className} key={index}>
+          </div>
+        </td>
+      );
+    } else if (head.type === "html") {
+      return (
+        <td className={head.className} key={i}>
+          <div className="number-div">
+            <ShowHistory {...historyObj} />
             <div
               className={row.className}
-              dangerouslySetInnerHTML={{ __html: row[head.id] }}
+              dangerouslySetInnerHTML={{
+                __html: row[head.id],
+              }}
             ></div>
-          </td>
-        );
-      default:
-        return (
-          <td className={head.className} key={index}>
-            {head.renderData ? (
-              head.renderData(row, index)
-            ) : (
-              <span
-                className={row.className}
-                onClick={() => head.handleClick?.(row, index)}
-              >
-                {row[head.id]}
-              </span>
-            )}
-          </td>
-        );
+          </div>
+        </td>
+      );
+    } else {
+      return (
+        <td className={head.className} key={i}>
+          {head.renderData ? (
+            head.renderData(row, index)
+          ) : (
+            <span
+              className={row.className}
+              onClick={() => {
+                if (head.handleClick) {
+                  head.handleClick(row, index);
+                }
+              }}
+            >
+              {row[head.id]}
+            </span>
+          )}
+        </td>
+      );
     }
   };
 
   return (
-    <tbody>
-      {slicedData?.length > 0 ? (
-        slicedData.map((row, rowIndex) => {
-          const isItemSelected =
-            Array.isArray(selected) &&
-            selected.some((item) =>
-              selectedBy
-                ? item[selectedBy] === row[selectedBy]
-                : item._id === row._id
-            );
+    <>
+      {slicedData.length > 0 ? (
+        <tbody>
+          {slicedData.map((row, index) => {
+            const isItemSelected =
+              selected?.length < 1
+                ? false
+                : selected?.some((obj) => {
+                    if (selected_by && selected_by !== "") {
+                      return obj[selected_by] === row[selected_by];
+                    } else {
+                      return obj._id === row._id;
+                    }
+                  });
 
-          return (
-            <React.Fragment key={rowIndex}>
-              <tr
-                tabIndex={-1}
-                role="checkbox"
-                selected={isItemSelected}
-                aria-checked={isItemSelected}
-              >
-                {checkboxSelection && (
-                  <td>
-                    <input
-                      type="checkbox"
-                      checked={isItemSelected}
-                      className="cursor-pointer input-checkbox"
-                      onChange={() => handleClick(row)}
-                    />
-                  </td>
-                )}
-                {TABLE_HEAD.map((head, colIndex) =>
-                  renderCell(row, head, colIndex)
-                )}
-              </tr>
-              {expandedRows.includes(row._id) && (
+            return (
+              <React.Fragment key={index}>
+                <tr
+                  tabIndex={-1}
+                  role="checkbox"
+                  selected={isItemSelected}
+                  aria-checked={isItemSelected}
+                >
+                  {checkbox_selection && (
+                    <td>
+                      <input
+                        type="checkbox"
+                        checked={isItemSelected}
+                        className="cursor-pointer input-checkbox"
+                        onChange={() => handleClick(row)}
+                      />
+                    </td>
+                  )}
+                  {TABLE_HEAD.map((head, i) => {
+                    return renderCell(row, head, i, index);
+                  })}
+                </tr>
                 <tr
                   className="history-tr"
                   style={{
@@ -248,39 +286,39 @@ const TableBody = ({
                   }}
                 >
                   <td
-                    colSpan="10"
+                    colSpan={TABLE_HEAD.length}
                     style={{
-                      padding: expandedRows.includes(row._id) ? "16px" : 0,
+                      padding: 0,
                     }}
                   >
                     <div className="no_hover">
                       <div className="history-container">
-                        {
-                          TABLE_HEAD.find(
-                            (head) => head.type === "number"
-                          ).show_history(row).component
-                        }
+                        {historyHead
+                          ? historyHead.show_history(row).component
+                          : ""}
                       </div>
                     </div>
                   </td>
                 </tr>
-              )}
-            </React.Fragment>
-          );
-        })
+              </React.Fragment>
+            );
+          })}
+        </tbody>
       ) : (
-        <tr>
-          <td
-            colSpan={
-              checkboxSelection ? 1 + TABLE_HEAD.length : TABLE_HEAD.length
-            }
-            className="data-not-found"
-          >
-            Data Not Found
-          </td>
-        </tr>
+        <tbody>
+          <tr>
+            <td
+              colSpan={
+                checkbox_selection ? 1 + TABLE_HEAD.length : TABLE_HEAD.length
+              }
+              className="data-not-found"
+            >
+              Data Not Found
+            </td>
+          </tr>
+        </tbody>
       )}
-    </tbody>
+    </>
   );
 };
 

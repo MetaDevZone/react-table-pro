@@ -113,35 +113,53 @@ function App() {
           is_show_history: true,
           icon: "",
           component: (
-            <div className="history-container">
-              <h2>{row.name}</h2>
-              <div className="history-item">
-                <div className="history-content">
-                  <div className="date">{row.date_of_birth}</div>
-                  <div className="event">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Itaque omnis soluta, aperiam incidunt, eveniet illum ipsum
-                    odio fugit reprehenderit,
-                  </div>
-                </div>
+            <div className="user">
+              <h3>User Info</h3>
+              <div className="user-info">
+                <h4>Name :</h4>
+                <p>{row.name}</p>
+              </div>
+              <div className="user-info">
+                <h4>Email :</h4>
+                <p>{row.email}</p>
+              </div>
+              <div className="user-info">
+                <h4>Phone Number :</h4>
+                <p>{row.phoneNumber}</p>
+              </div>
+              <div className="user-info">
+                <h4>Address :</h4>
+                <p>{row.address}</p>
+              </div>
+              <div className="user-info">
+                <h4>Job Title :</h4>
+                <p>{row.jobTitle}</p>
+              </div>
+              <div className="user-info">
+                <h4>Company :</h4>
+                <p>{row.company}</p>
               </div>
             </div>
           ),
         };
       },
     },
-    { id: "thumbnail", label: "Profile Image", type: "thumbnail" },
+    {
+      id: "thumbnail",
+      label: "Profile Image",
+      type: "thumbnail",
+    },
     { id: "name", label: "User Name" },
     { id: "email", label: "Email" },
     { id: "phoneNumber", label: "Phone Number" },
-    { id: "status", label: "Status", type: "row_status" },
     {
       id: "any",
-      label: "Render Data",
+      label: "Job Title",
       renderData: (row) => {
-        return <div>Render Data {row._id}</div>;
+        return <div>{row.jobTitle}</div>;
       },
     },
+    { id: "status", label: "Status", type: "row_status" },
   ];
 
   // const searchFunction = () => {};
@@ -166,16 +184,16 @@ function App() {
         //   setSearchText: setSearchText,
         //   handleSubmit: searchFunction,
         // }}
-        className=""
+        class_Name=""
         theme_config={{
           background: "#1d1c1d",
           color: "#fff",
           iconColor: "#f6bd4b",
         }}
-        isStickyHeader={false}
-        isHideFooterPagination={false}
-        isHideHeaderPagination={false}
-        isHideSearch={false}
+        is_Sticky_Header={false}
+        is_Hide_Footer_Pagination={false}
+        is_Hide_Header_Pagination={false}
+        is_Hide_Search={false}
       />
     </div>
   );
@@ -186,18 +204,18 @@ export default App;
 
 ## Props
 
-| Prop                     | Type      | Description                                                             | Default |
-| ------------------------ | --------- | ----------------------------------------------------------------------- | ------- |
-| `data`                   | `Array`   | An array of objects representing the data to be displayed in the table. |         |
-| `TABLE_HEAD`             | `Array`   | An array of objects defining the structure of the table header.         |         |
-| `MENU_OPTIONS`           | `Array`   | An array of objects for action menu options (e.g., edit, delete).       |         |
-| `checkbox_selection`     | `Object`  | Configuration object for managing checkbox selection in the table.      |         |
-| `className`              | `String`  | Custom class name for additional styling.                               |         |
-| `theme_config`           | `Object`  | Configuration object for customizing the table's theme. .               |         |
-| `isStickyHeader`         | `Boolean` | Determines if the table header should be sticky.                        | `false` |
-| `isHideFooterPagination` | `Boolean` | Hides the footer pagination if set to true.                             | `false` |
-| `isHideHeaderPagination` | `Boolean` | Hides the header pagination if set to true.                             | `false` |
-| `isHideSearch`           | `Boolean` | Hides the search bar if set to true.                                    | `false` |
+| Prop                        | Type               | Description                                                             | Default |
+| --------------------------- | ------------------ | ----------------------------------------------------------------------- | ------- |
+| `data`                      | `Array`            | An array of objects representing the data to be displayed in the table. |         |
+| `TABLE_HEAD`                | `Array`            | An array of objects defining the structure of the table header.         |         |
+| `MENU_OPTIONS`              | `Array / Function` | An array of objects for action menu options (e.g., edit, delete).       |         |
+| `checkbox_selection`        | `Object`           | Configuration object for managing checkbox selection in the table.      |         |
+| `class_Name`                | `String`           | Custom class name for additional styling.                               |         |
+| `theme_config`              | `Object`           | Configuration object for customizing the table's theme. .               |         |
+| `is_Sticky_Header`          | `Boolean`          | Determines if the table header should be sticky.                        | `false` |
+| `is_Hide_Footer_Pagination` | `Boolean`          | Hides the footer pagination if set to true.                             | `false` |
+| `is_Hide_Header_Pagination` | `Boolean`          | Hides the header pagination if set to true.                             | `false` |
+| `i_sHide_Search`            | `Boolean`          | Hides the search bar if set to true.                                    | `false` |
 
 ## Custom Cell Types
 

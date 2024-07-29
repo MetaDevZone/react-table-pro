@@ -1,5 +1,5 @@
 import React from "react";
-import PageLeft from "./PageLeft";
+import PageLeft from "./svg/PageLeft";
 import PageRight from "./svg/PageRight";
 
 const LocalPagination = ({
