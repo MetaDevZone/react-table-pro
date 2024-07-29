@@ -8,7 +8,6 @@ import {
 } from "./components";
 import DownIcon from "./components/svg/DownIcon";
 import UpIcon from "./components/svg/UpIcon";
-import "./index.css";
 
 const ReactTable = ({
   data,
@@ -395,17 +394,23 @@ const ReactTable = ({
                     }}
                   >
                     <td
-                      colSpan="10"
+                      colSpan={
+                        TABLE_HEAD.find(
+                          (head) => head.type === "number"
+                        ).show_history(row)?.colSpan ?? "10"
+                      }
                       style={{
                         padding: expandedRows.includes(row._id) ? "16px" : 0,
                       }}
                     >
                       <div className="no_hover">
-                        {
-                          TABLE_HEAD.find(
-                            (head) => head.type === "number"
-                          ).show_history(row).component
-                        }
+                        <div className="history-container">
+                          {
+                            TABLE_HEAD.find(
+                              (head) => head.type === "number"
+                            ).show_history(row).component
+                          }
+                        </div>
                       </div>
                     </td>
                   </tr>

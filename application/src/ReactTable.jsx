@@ -9,7 +9,7 @@ import {
 import DownIcon from "./components/svg/DownIcon";
 import UpIcon from "./components/svg/UpIcon";
 
-const ReactDateTablePro = ({
+const ReactTable = ({
   data,
   TABLE_HEAD,
   MENU_OPTIONS,
@@ -447,4 +447,4 @@ const ReactDateTablePro = ({
   );
 };
 
-export default ReactDateTablePro;
+export default ReactTable;

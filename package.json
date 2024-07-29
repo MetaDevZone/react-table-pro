@@ -1,6 +1,6 @@
 {
   "name": "@meta-dev-zone/react-table",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "./build/index.js",
   "private": false,
   "scripts": {

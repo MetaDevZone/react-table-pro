@@ -114,10 +114,10 @@ function App() {
           icon: "",
           component: (
             <div className="history-container">
-              <h2>History</h2>
+              <h2>{row.name}</h2>
               <div className="history-item">
                 <div className="history-content">
-                  <div className="date">July 24, 2024</div>
+                  <div className="date">{row.date_of_birth}</div>
                   <div className="event">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Itaque omnis soluta, aperiam incidunt, eveniet illum ipsum
@@ -208,7 +208,7 @@ export default App;
 | `row_status`   | Shows the status of the row.   |
 | `row_calendar` | Shows the status of the row.   |
 | `link`         | Renders a clickable link.      |
-| `radio_button` | RRenders a radio button.       |
+| `radio_button` | Renders a radio button.        |
 | `html`         | Renders HTML content.          |
 | `checkbox`     | Renders a checkbox.            |
 
