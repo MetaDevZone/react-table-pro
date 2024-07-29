@@ -37,12 +37,12 @@ const ReactTable = ({
   TABLE_HEAD,
   MENU_OPTIONS,
   checkbox_selection,
-  is_Sticky_Header,
-  is_Hide_Footer_Pagination,
-  is_Hide_Header_Pagination,
-  is_Hide_Search,
+  is_sticky_header,
+  is_hide_footer_pagination,
+  is_hide_header_pagination,
+  is_hide_search,
   custom_search,
-  class_Name,
+  class_name,
   theme_config,
 }) => {
   const [page, setPage] = useState(0);
@@ -88,14 +88,14 @@ const ReactTable = ({
 
   return (
     <div
-      className={`table-container-pro ${class_Name ? class_Name : ""} ${
-        is_Sticky_Header ? "sticky-header" : ""
+      className={`table-container-pro ${class_name ? class_name : ""} ${
+        is_sticky_header ? "sticky-header" : ""
       }`}
     >
-      {!is_Hide_Search && !is_Hide_Header_Pagination && (
+      {!is_hide_search && !is_hide_header_pagination && (
         <div className="thead-container-pro">
           <div className="pagination-container">
-            {!is_Hide_Header_Pagination && (
+            {!is_hide_header_pagination && (
               <LocalPagination
                 rowsPerPage={rowsPerPage}
                 handleChangeRowsPerPage={handleChangeRowsPerPage}
@@ -114,7 +114,7 @@ const ReactTable = ({
               />
             ) : (
               <>
-                {!is_Hide_Search && (
+                {!is_hide_search && (
                   <UserListToolbar
                     filterName={filterName}
                     onFilterName={handleFilterByName}
@@ -147,7 +147,7 @@ const ReactTable = ({
           rowsPerPage={rowsPerPage}
         />
       </table>
-      {!is_Hide_Footer_Pagination && (
+      {!is_hide_footer_pagination && (
         <LocalPagination
           rowsPerPage={rowsPerPage}
           handleChangeRowsPerPage={handleChangeRowsPerPage}

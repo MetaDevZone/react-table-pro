@@ -167,16 +167,16 @@ function App() {
         //   setSearchText: setSearchText,
         //   handleSubmit: searchFunction,
         // }}
-        class_Name=""
+        class_name=""
         theme_config={{
           background: "#1d1c1d",
           color: "#fff",
           iconColor: "#f6bd4b",
         }}
-        is_Sticky_Header={false}
-        is_Hide_Footer_Pagination={false}
-        is_Hide_Header_Pagination={false}
-        is_Hide_Search={false}
+        is_sticky_header={false}
+        is_hide_footer_pagination={false}
+        is_hide_header_pagination={false}
+        is_hide_search={false}
       />
     </div>
   );
