@@ -1,22 +1,22 @@
-# ReactDateTablePro
+# React Table
 
 ## Overview
 
-`ReactDateTablePro` is a flexible and customizable React table component designed for displaying and managing tabular data with ease. This component supports various functionalities such as searching, pagination, and more.
+`React Table` is a flexible and customizable React table component designed for displaying and managing tabular data with ease. This component supports various functionalities such as searching, pagination, and more.
 
 ## Installation
 
-To install the `ReactDateTablePro` component, you can use npm:
+To install the `React Table` component, you can use npm:
 
 ```bash
-npm install react-data-table-pro
+npm install @meta-dev-zone/react-table
 
 ```
 
 Or using yarn
 
 ```bash
-yarn add react-filter-chips
+yarn add @meta-dev-zone/react-table
 
 ```
 
@@ -24,7 +24,7 @@ yarn add react-filter-chips
 
 ```tsx
 import React, { useState, useEffect } from "react";
-import ReactDateTablePro from "react-data-table-pro";
+import ReactTable from "@meta-dev-zone/react-table";
 
 const members = [
   {
@@ -85,17 +85,17 @@ function App() {
   const MENU_OPTIONS = [
     {
       label: "Edit",
-      // icon: </>,
+      icon: "📄",
       handleClick: handleEdit,
     },
     {
       label: "Delete",
-      // icon: </>,
+      icon: "📄",
       handleClick: handleDelete,
       // child_options: [
       //   {
       //     label: "Setting",
-      //     icon: </>,
+      //      icon: "📄",
       //     handleClick: handleEdit,
       //   },
       // ],
@@ -113,21 +113,19 @@ function App() {
           is_show_history: true,
           icon: "",
           component: (
-            <>
-              <div className="history-container">
-                <h2>History</h2>
-                <div className="history-item">
-                  <div className="history-content">
-                    <div className="date">July 24, 2024</div>
-                    <div className="event">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Itaque omnis soluta, aperiam incidunt, eveniet illum ipsum
-                      odio fugit reprehenderit,
-                    </div>
+            <div className="history-container">
+              <h2>History</h2>
+              <div className="history-item">
+                <div className="history-content">
+                  <div className="date">July 24, 2024</div>
+                  <div className="event">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Itaque omnis soluta, aperiam incidunt, eveniet illum ipsum
+                    odio fugit reprehenderit,
                   </div>
                 </div>
               </div>
-            </>
+            </div>
           ),
         };
       },
@@ -146,13 +144,15 @@ function App() {
     },
   ];
 
+  // const searchFunction = () => {};
+
   useEffect(() => {
     getData();
   }, []);
 
   return (
     <div className="App">
-      <ReactDateTablePro
+      <ReactTable
         data={users} // required
         TABLE_HEAD={TABLE_HEAD} // required
         MENU_OPTIONS={MENU_OPTIONS} // required
@@ -206,7 +206,6 @@ export default App;
 | `action`       | Renders custom action buttons. |
 | `thumbnail`    | Displays an image thumbnail.   |
 | `row_status`   | Shows the status of the row.   |
-|                |
 | `row_calendar` | Shows the status of the row.   |
 | `link`         | Renders a clickable link.      |
 | `radio_button` | RRenders a radio button.       |

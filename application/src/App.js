@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import ReactDateTablePro from "react-data-table-pro";
+// import ReactTable from "@meta-dev-zone/react-table";
+import ReactTable from "./ReactDateTablePro";
 
 const members = [
   {
@@ -60,17 +61,17 @@ function App() {
   const MENU_OPTIONS = [
     {
       label: "Edit",
-      // icon: </>,
+      icon: "📄",
       handleClick: handleEdit,
     },
     {
       label: "Delete",
-      // icon: </>,
+      icon: "📄",
       handleClick: handleDelete,
       // child_options: [
       //   {
       //     label: "Setting",
-      //     icon: </>,
+      //      icon: "📄",
       //     handleClick: handleEdit,
       //   },
       // ],
@@ -89,16 +90,14 @@ function App() {
           icon: "",
           component: (
             <>
-              <div className="history-container">
-                <h2>History</h2>
-                <div className="history-item">
-                  <div className="history-content">
-                    <div className="date">July 24, 2024</div>
-                    <div className="event">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Itaque omnis soluta, aperiam incidunt, eveniet illum ipsum
-                      odio fugit reprehenderit,
-                    </div>
+              <h2>History</h2>
+              <div className="history-item">
+                <div className="history-content">
+                  <div className="date">July 24, 2024</div>
+                  <div className="event">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Itaque omnis soluta, aperiam incidunt, eveniet illum ipsum
+                    odio fugit reprehenderit,
                   </div>
                 </div>
               </div>
@@ -121,13 +120,15 @@ function App() {
     },
   ];
 
+  // const searchFunction = () => {};
+
   useEffect(() => {
     getData();
   }, []);
 
   return (
     <div className="App">
-      <ReactDateTablePro
+      <ReactTable
         data={users} // required
         TABLE_HEAD={TABLE_HEAD} // required
         MENU_OPTIONS={MENU_OPTIONS} // required

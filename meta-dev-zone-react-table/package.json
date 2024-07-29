@@ -1,7 +1,8 @@
 {
-  "name": "react-data-table-pro",
-  "version": "1.0.0",
+  "name": "@meta-dev-zone/react-table",
+  "version": "1.0.2",
   "main": "./build/index.js",
+  "private": false,
   "scripts": {
     "build": "webpack"
   },
