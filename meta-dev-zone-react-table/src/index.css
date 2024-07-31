@@ -290,6 +290,31 @@ html {
   margin-left: 25px;
 }
 
+.table-container-pro .pagination-container .custom-buttons {
+  margin: 20px 0px;
+  margin-left: 0px;
+}
+
+.table-container-pro .pagination-container .footer-count {
+  display: flex;
+  justify-content: end;
+  margin-right: 10px;
+  margin-top: 0px;
+}
+
+.table-container-pro .pagination-container .page-count {
+  color: var(--table-text-color);
+  background-color: #ffffff30;
+  border-radius: 2px;
+  height: 25px;
+  width: 25px;
+  margin: 0 5px;
+}
+
+.table-container-pro .pagination-container .page-count.active {
+  background-color: var(--table-svg-color);
+}
+
 .table-container-pro .pagination-container .count-button:hover,
 .table-container-pro .pagination-container .count-button.active {
   background-color: #000;

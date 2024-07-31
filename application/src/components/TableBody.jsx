@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import UpIcon from "./svg/UpIcon";
-import DownIcon from "./svg/DownIcon";
 import CustomPopoverSection from "./CustomPopoverSection";
 import ShowHistory from "./ShowHistory";
 

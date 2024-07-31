@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import ReactTable from "@meta-dev-zone/react-table";
-// import ReactTable from "./ReactTable";
 
 const members = [
   {
@@ -35,7 +34,20 @@ const members = [
 function App() {
   const [selected, setSelected] = useState([]);
   const [users, setUsers] = useState([]);
-  // const [searchText, setSearchText] = useState("");
+  const [searchText, setSearchText] = useState("");
+  const [page, setPage] = useState(0);
+  const [rowsPerPage, setRowsPerPage] = useState(1);
+  const [totalCount, setTotalCount] = useState(0);
+  const [totalPages, setTotalPages] = useState(2);
+
+  const handleChangePage = (newPage) => {
+    if (newPage == 1) {
+      setUsers([members[1]]);
+    } else {
+      setUsers([members[0]]);
+    }
+    setPage(newPage);
+  };
 
   const handleEdit = (value) => {
     console.log(value, "---value");
@@ -75,13 +87,13 @@ function App() {
       label: "Delete",
       icon: "📄",
       handleClick: handleDelete,
-      // child_options: [
-      //   {
-      //     label: "Setting",
-      //      icon: "📄",
-      //     handleClick: handleEdit,
-      //   },
-      // ],
+      child_options: [
+        {
+          label: "Setting",
+          icon: "📄",
+          handleClick: handleEdit,
+        },
+      ],
     },
   ];
 
@@ -145,7 +157,7 @@ function App() {
     { id: "status", label: "Status", type: "row_status" },
   ];
 
-  // const searchFunction = () => {};
+  const searchFunction = () => {};
 
   useEffect(() => {
     getData();
@@ -160,13 +172,20 @@ function App() {
         checkbox_selection={{
           selected: selected,
           setSelected: setSelected,
-          // selected_by: "",
+          selected_by: "name",
         }}
-        // custom_search={{
-        //   searchText: searchText,
-        //   setSearchText: setSearchText,
-        //   handleSubmit: searchFunction,
-        // }}
+        custom_search={{
+          searchText: searchText,
+          setSearchText: setSearchText,
+          handleSubmit: searchFunction,
+        }}
+        custom_pagination={{
+          total_count: totalCount,
+          rows_per_page: rowsPerPage,
+          page: page,
+          total_pages: totalPages,
+          handleChangePage: handleChangePage,
+        }}
         class_name=""
         theme_config={{
           background: "#1d1c1d",

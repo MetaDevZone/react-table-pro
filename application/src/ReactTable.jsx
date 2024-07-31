@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {
-  LocalPagination,
+  Pagination,
   TableBody,
   TableHeadList,
   UserListToolbar,
@@ -43,17 +43,20 @@ const ReactTable = ({
   custom_search,
   class_name,
   theme_config,
+  custom_pagination,
 }) => {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(50);
-  const [filterName, setFilterName] = useState("");
 
+  const [filterName, setFilterName] = useState("");
   const selected_by = checkbox_selection?.selected_by;
   const setSelected = checkbox_selection?.setSelected;
   const selected = checkbox_selection?.selected;
 
   const filteredData = filterDataByName(data, filterName);
-  const slicedData = sliceData(filteredData, page, rowsPerPage);
+  const slicedData = custom_pagination
+    ? filteredData
+    : sliceData(filteredData, page, rowsPerPage);
 
   const handleFilterByName = (event) => {
     setFilterName(event.target.value);
@@ -65,6 +68,10 @@ const ReactTable = ({
   };
 
   const handleChangePage = (newPage) => {
+    if (custom_pagination?.handleChangePage) {
+      custom_pagination.handleChangePage(newPage);
+      return;
+    }
     setPage(newPage);
   };
 
@@ -85,6 +92,21 @@ const ReactTable = ({
     applyThemeConfig(theme_config);
   }, [theme_config]);
 
+  useEffect(() => {
+    if (custom_pagination) {
+      let { page, rows_per_page } = custom_pagination;
+
+      if (page || page == 0) {
+        setPage(page);
+      }
+      if (rows_per_page) {
+        setRowsPerPage(rows_per_page);
+      }
+    }
+  }, [custom_pagination]);
+
+  console.log(slicedData, "slicedDataslicedData");
+
   return (
     <div
       className={`table-container-pro ${class_name ? class_name : ""} ${
@@ -95,12 +117,13 @@ const ReactTable = ({
         <div className="thead-container-pro">
           <div className="pagination-container">
             {!is_hide_header_pagination && (
-              <LocalPagination
+              <Pagination
                 rowsPerPage={rowsPerPage}
                 handleChangeRowsPerPage={handleChangeRowsPerPage}
                 filteredData={filteredData}
                 handleChangePage={handleChangePage}
                 page={page}
+                custom_pagination={custom_pagination}
               />
             )}
           </div>
@@ -147,13 +170,14 @@ const ReactTable = ({
         />
       </table>
       {!is_hide_footer_pagination && (
-        <LocalPagination
+        <Pagination
           rowsPerPage={rowsPerPage}
           handleChangeRowsPerPage={handleChangeRowsPerPage}
           filteredData={filteredData}
           handleChangePage={handleChangePage}
           page={page}
-          footer
+          custom_pagination={custom_pagination}
+          footer={true}
         />
       )}
     </div>
