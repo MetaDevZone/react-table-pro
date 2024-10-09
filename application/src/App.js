@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import ReactTable from "@meta-dev-zone/react-table";
+import ReactTable from "./ReactTable";
 
 const members = [
   {
     _id: 1,
-    name: "John Doe",
+    title: "John Doe",
     email: "johndoe@example.com",
     phoneNumber: "+44 1233 123456",
     status: true,
@@ -17,7 +17,7 @@ const members = [
   },
   {
     _id: 2,
-    name: "Jane Smith",
+    title: "Jane Smith",
     email: "janesmith@example.com",
     phoneNumber: "+1 555 123 4567",
     status: false,
@@ -112,7 +112,7 @@ function App() {
               <h3>User Info</h3>
               <div className="user-info">
                 <h4>Name :</h4>
-                <p>{row.name}</p>
+                <p>{row.title}</p>
               </div>
               <div className="user-info">
                 <h4>Email :</h4>
@@ -144,7 +144,7 @@ function App() {
       label: "Profile Image",
       type: "thumbnail",
     },
-    { id: "name", label: "User Name" },
+    { id: "title", label: "User Name" },
     { id: "email", label: "Email" },
     { id: "phoneNumber", label: "Phone Number" },
     {
@@ -174,18 +174,18 @@ function App() {
           setSelected: setSelected,
           selected_by: "name",
         }}
-        custom_search={{
-          searchText: searchText,
-          setSearchText: setSearchText,
-          handleSubmit: searchFunction,
-        }}
-        custom_pagination={{
-          total_count: totalCount,
-          rows_per_page: rowsPerPage,
-          page: page,
-          total_pages: totalPages,
-          handleChangePage: handleChangePage,
-        }}
+        // custom_search={{
+        //   searchText: searchText,
+        //   setSearchText: setSearchText,
+        //   handleSubmit: searchFunction,
+        // }}
+        // custom_pagination={{
+        //   total_count: totalCount,
+        //   rows_per_page: rowsPerPage,
+        //   page: page,
+        //   total_pages: totalPages,
+        //   handleChangePage: handleChangePage,
+        // }}
         class_name=""
         theme_config={{
           background: "#1d1c1d",

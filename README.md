@@ -4,9 +4,9 @@
 
 `React Table` is a flexible and customizable React table component designed for displaying and managing tabular data with ease. This component supports various functionalities such as searching, pagination, and more.
 
-## Installation
+## Live Demo
 
-To install the `React Table` component, you can use npm:
+To test React Table on CodeSandbox, click [here](https://codesandbox.io/p/devbox/rcm3mh).
 
 ```bash
 npm install @meta-dev-zone/react-table

@@ -20,9 +20,16 @@ const applyThemeConfig = (themeConfig) => {
 };
 
 const filterDataByName = (data, filterName) => {
-  return data.filter((item) =>
-    item.name.toLowerCase().includes(filterName.toLowerCase())
-  );
+  return data.filter((item) => {
+    if (item?.name) {
+      return item.name.toLowerCase().includes(filterName.toLowerCase());
+    }
+    return Object.values(item).some(
+      (value) =>
+        typeof value === "string" &&
+        value.toLowerCase().includes(filterName.toLowerCase())
+    );
+  });
 };
 
 const sliceData = (data, page, rowsPerPage) => {
